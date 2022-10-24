@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <color name="dark_blue_600">#363945</color>
+    <color name="dark_blue_700">#272932</color>
+    <color name="dark_blue_800">#24262E</color>
+    <color name="green_400">#27CE85</color>
+    <color name="green_500">#20AB6E</color>
+    <color name="green_600">#1A8959</color>
+    <color name="grey_100">#B6B7BF</color>
+    <color name="grey_200">#63687E</color>
+    <color name="grey_300">#484B5B</color>
+    <color name="red">#FF7B69</color>
+    <color name="white_100">#FBFEFF</color>
+    <color name="white_200">#EEF0F5</color>
+    <string name="app_name">Groupify</string>
+    <style name="Theme.Groupify" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/green_500</item>
+        <item name="colorPrimaryVariant">@color/green_400</item>
+        <item name="colorOnPrimary">@color/green_600</item>
+
+        <item name="colorSecondary">@color/dark_blue_700</item>
+        <item name="colorSecondaryVariant">@color/dark_blue_600</item>
+        <item name="colorOnSecondary">@color/dark_blue_800</item>
+
+        <item name="android:colorBackground">@color/white_100</item>
+        <item name="colorOnBackground">@color/white_200</item>
+
+        <item name="colorTertiaryContainer">@color/grey_300</item>
+        <item name="colorTertiary">@color/grey_200</item>
+        <item name="colorOnTertiary">@color/grey_100</item>
+
+        <item name="colorError">@color/red</item>
+
+        <item name="android:statusBarColor" ns1:targetApi="l">?attr/colorOnSecondary</item>
+    </style>
+</resources>
