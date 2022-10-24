@@ -35,5 +35,5 @@ mysqli_stmt_bind_param($stmt, "sssss", $username, $hashedpass, $email, $bio, $pr
 mysqli_stmt_execute($stmt);
 mysqli_stmt_close($stmt);
 
-$obj = array("status" => 200, "message"=>"Signed in");
+$obj = array("status" => 200);
 echo (json_encode($obj));
