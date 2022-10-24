@@ -42,16 +42,16 @@ public class SplashScreen extends AppCompatActivity {
             return null;
         }, 4000);
 
-//        Delayer.getInstance().postAfter(() -> {
-//            SharedPreferences shared = getApplicationContext().getSharedPreferences("groupify", MODE_PRIVATE);
-//            if(shared.getBoolean("first_time_open.groupify", true)){
-//                Intent i = new Intent(getApplicationContext(), OnBoardOne.class);
-//                startActivity(i);
-//            }else{
-//                Intent i = new Intent(getApplicationContext(), Login.class);
-//                startActivity(i);
-//            }
-//            return null;
-//        }, 10000);
+        Delayer.getInstance().postAfter(() -> {
+            SharedPreferences shared = getApplicationContext().getSharedPreferences("groupify", MODE_PRIVATE);
+            if(shared.getBoolean("first_time_open.groupify", true)){
+                Intent i = new Intent(getApplicationContext(), OnBoardOne.class);
+                startActivity(i);
+            }else{
+                Intent i = new Intent(getApplicationContext(), Login.class);
+                startActivity(i);
+            }
+            return null;
+        }, 10000);
     }
 }
