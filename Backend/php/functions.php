@@ -38,6 +38,7 @@ function passmatch($connection, $pass, $username){
     mysqli_stmt_execute($stmt);
 
     $results = mysqli_stmt_get_result($stmt);
+    $row = mysqli_fetch_assoc($results);
 
-    return $row = mysql_fetch_array($result) && $row["password"] == $pass;
+    return $row["password"] == $pass;
 }
