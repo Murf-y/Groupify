@@ -29,6 +29,7 @@ public class Signup extends AppCompatActivity {
         ActivitySignupBinding binding = ActivitySignupBinding.inflate(getLayoutInflater());
         View root = binding.getRoot();
         setContentView(root);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         binding.passwordInput.setDrawableClickListener(new DrawableClickListener() {
             @Override
@@ -50,29 +51,44 @@ public class Signup extends AppCompatActivity {
                 binding.usernameError.setText("Username should not be empty!");
                 binding.usernameError.setVisibility(View.VISIBLE);
 
+                AnimationHelper.getInstance().fadeIn(binding.usernameError, 1000);
                 Delayer.getInstance().postAfter(() -> {
                     AnimationHelper.getInstance().fadeOut(binding.usernameError, 1000);
-                    binding.usernameError.setVisibility(View.GONE);
+                    Delayer.getInstance().postAfter(() -> {
+                        binding.usernameError.setVisibility(View.GONE);
+                        return null;
+                    }, 1000);
                     return null;
                 }, 5000);
             }else if(!InputValidator.isEmailValid(email)){
-                binding.usernameError.setText("Invalid format for email");
-                binding.usernameError.setVisibility(View.VISIBLE);
+                binding.accountinfoError.setText("Invalid format for email");
+                binding.accountinfoError.setVisibility(View.VISIBLE);
 
+                AnimationHelper.getInstance().fadeIn(binding.accountinfoError, 1000);
                 Delayer.getInstance().postAfter(() -> {
-                    AnimationHelper.getInstance().fadeOut(binding.usernameError, 1000);
-                    binding.usernameError.setVisibility(View.GONE);
+                    AnimationHelper.getInstance().fadeOut(binding.accountinfoError, 1000);
+                    Delayer.getInstance().postAfter(() -> {
+                        binding.accountinfoError.setVisibility(View.GONE);
+                        return null;
+                    }, 1000);
                     return null;
                 }, 5000);
             }else if(!InputValidator.isPasswordValid(password)){
-                binding.usernameError.setText("Invalid format for password");
-                binding.usernameError.setVisibility(View.VISIBLE);
+                binding.accountinfoError.setText("Password must be at least 8 characters");
+                binding.accountinfoError.setVisibility(View.VISIBLE);
 
+                AnimationHelper.getInstance().fadeIn(binding.accountinfoError, 1000);
                 Delayer.getInstance().postAfter(() -> {
-                    AnimationHelper.getInstance().fadeOut(binding.usernameError, 1000);
-                    binding.usernameError.setVisibility(View.GONE);
+                    AnimationHelper.getInstance().fadeOut(binding.accountinfoError, 1000);
+                    Delayer.getInstance().postAfter(() -> {
+                        binding.accountinfoError.setVisibility(View.GONE);
+                        return null;
+                    }, 1000);
                     return null;
                 }, 5000);
+            }else{
+                Intent i = new Intent(getApplicationContext(), HomeActivity.class);
+                startActivity(i);
             }
 
             // proceed with sign up procedure

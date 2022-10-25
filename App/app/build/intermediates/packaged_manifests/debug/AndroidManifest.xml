@@ -22,6 +22,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.Groupify" >
         <activity
+            android:name="com.murfy.groupify.activities.HomeActivity"
+            android:exported="false" />
+        <activity
             android:name="com.murfy.groupify.activities.Login"
             android:exported="false" />
         <activity

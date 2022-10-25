@@ -7,7 +7,7 @@
     tools:context=".activities.Signup">
 
     <ImageView
-        android:id="@+id/signUpbackground"
+        android:id="@+id/loginBackground"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/signup_background"
@@ -83,7 +83,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signUpbackground"
+        app:layout_constraintTop_toBottomOf="@+id/loginBackground"
         app:layout_constraintVertical_bias="0.100000024">
 
         <TextView
@@ -148,7 +148,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/worksans_regular"
             android:text="Already have an acoount?"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/loginInstead"
@@ -159,7 +159,7 @@
             android:fontFamily="@font/worksans_medium"
             android:text="Log In"
             android:textColor="?attr/colorOnPrimary"
-            android:textSize="24sp" />
+            android:textSize="20sp" />
     </LinearLayout>
 
     <TextView

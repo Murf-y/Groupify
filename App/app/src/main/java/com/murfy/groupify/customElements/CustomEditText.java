@@ -115,7 +115,7 @@ public class CustomEditText extends androidx.appcompat.widget.AppCompatEditText 
                 bounds = drawableRight.getBounds();
 
                 int x, y;
-                int extraTapArea = 40;
+                int extraTapArea = 70;
 
                 /**
                  * IF USER CLICKS JUST OUT SIDE THE RECTANGLE OF THE DRAWABLE

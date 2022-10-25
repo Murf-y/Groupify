@@ -2449,6 +2449,7 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable bottom_nav_bar
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -2463,6 +2464,9 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable home_empty_state
+drawable home_line_separator
+drawable home_notifications_bell
 drawable ic_clock_black_24dp
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
@@ -2475,6 +2479,7 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable input
+drawable login_background
 drawable logo_b
 drawable m3_appbar_background
 drawable m3_popupmenu_background_overlay
@@ -2504,6 +2509,11 @@ drawable mtrl_navigation_bar_item_background
 drawable mtrl_popupmenu_background
 drawable mtrl_popupmenu_background_overlay
 drawable mtrl_tabs_default_indicator
+drawable nav_bar_add
+drawable nav_bar_home
+drawable nav_bar_home_grey
+drawable nav_bar_search
+drawable nav_bar_search_grey
 drawable navigation_empty_icon
 drawable notification_action_background
 drawable notification_bg
@@ -2525,6 +2535,7 @@ drawable on_board_three_background
 drawable on_board_two_background
 drawable on_board_two_dots
 drawable on_board_two_foreground
+drawable profile_avatar_default
 drawable signup_background
 drawable signup_eye
 drawable signup_eye_closed
@@ -2589,6 +2600,7 @@ id accessibility_custom_action_7
 id accessibility_custom_action_8
 id accessibility_custom_action_9
 id accountinfo
+id accountinfoError
 id actionDown
 id actionDownUp
 id actionUp
@@ -2612,6 +2624,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id addButton
 id alertTitle
 id aligned
 id all
@@ -2629,6 +2642,7 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
+id avatar
 id background
 id barrier
 id baseline
@@ -2729,14 +2743,19 @@ id edittext_dropdown_editable
 id edittext_dropdown_noneditable
 id elastic
 id emailInput
+id empty_state_image
+id empty_state_text
 id end
 id endToStart
 id enterAlways
 id enterAlwaysCollapsed
+id errorMessage
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
+id explore
 id fade
+id favoriteButton
 id fill
 id fill_horizontal
 id fill_vertical
@@ -2768,6 +2787,7 @@ id header_title
 id hideable
 id home
 id homeAsUp
+id homeButton
 id honorRequest
 id horizontal_only
 id icon
@@ -2795,9 +2815,13 @@ id line3
 id linear
 id linearLayout
 id linearLayout2
+id linearLayout3
+id linearLayout4
 id listMode
 id list_item
+id loginBackground
 id loginInstead
+id logo
 id logo_b
 id masked
 id match_constraint
@@ -2856,6 +2880,7 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
+id mygroups
 id navigation_bar_item_active_indicator_view
 id navigation_bar_item_icon_container
 id navigation_bar_item_icon_view
@@ -2874,6 +2899,7 @@ id north
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id notifications
 id off
 id on
 id onBoardOneDots
@@ -2938,14 +2964,15 @@ id search_voice_btn
 id select_dialog_listview
 id selected
 id selection_type
+id seperator
 id sharedValueSet
 id sharedValueUnset
 id shortcut
 id showCustom
 id showHome
 id showTitle
-id signUpbackground
 id signup
+id signupInstead
 id sin
 id skip
 id skipCollapsed
@@ -3034,6 +3061,7 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id usernameError
 id usernameInput
 id vertical_only
 id view_offset_helper
@@ -3145,6 +3173,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_home
 layout activity_login
 layout activity_on_board_one
 layout activity_on_board_three

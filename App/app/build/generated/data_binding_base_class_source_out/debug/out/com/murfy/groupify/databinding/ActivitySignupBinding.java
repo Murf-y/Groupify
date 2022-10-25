@@ -28,6 +28,9 @@ public final class ActivitySignupBinding implements ViewBinding {
   public final TextView accountinfo;
 
   @NonNull
+  public final TextView accountinfoError;
+
+  @NonNull
   public final TextView alreadyHaveAccount;
 
   @NonNull
@@ -40,6 +43,9 @@ public final class ActivitySignupBinding implements ViewBinding {
   public final LinearLayout linearLayout2;
 
   @NonNull
+  public final ImageView loginBackground;
+
+  @NonNull
   public final TextView loginInstead;
 
   @NonNull
@@ -49,31 +55,34 @@ public final class ActivitySignupBinding implements ViewBinding {
   public final TextView pickusername;
 
   @NonNull
-  public final ImageView signUpbackground;
+  public final Button signup;
 
   @NonNull
-  public final Button signup;
+  public final TextView usernameError;
 
   @NonNull
   public final EditText usernameInput;
 
   private ActivitySignupBinding(@NonNull ConstraintLayout rootView, @NonNull TextView accountinfo,
-      @NonNull TextView alreadyHaveAccount, @NonNull EditText emailInput,
-      @NonNull LinearLayout linearLayout, @NonNull LinearLayout linearLayout2,
+      @NonNull TextView accountinfoError, @NonNull TextView alreadyHaveAccount,
+      @NonNull EditText emailInput, @NonNull LinearLayout linearLayout,
+      @NonNull LinearLayout linearLayout2, @NonNull ImageView loginBackground,
       @NonNull TextView loginInstead, @NonNull CustomEditText passwordInput,
-      @NonNull TextView pickusername, @NonNull ImageView signUpbackground, @NonNull Button signup,
+      @NonNull TextView pickusername, @NonNull Button signup, @NonNull TextView usernameError,
       @NonNull EditText usernameInput) {
     this.rootView = rootView;
     this.accountinfo = accountinfo;
+    this.accountinfoError = accountinfoError;
     this.alreadyHaveAccount = alreadyHaveAccount;
     this.emailInput = emailInput;
     this.linearLayout = linearLayout;
     this.linearLayout2 = linearLayout2;
+    this.loginBackground = loginBackground;
     this.loginInstead = loginInstead;
     this.passwordInput = passwordInput;
     this.pickusername = pickusername;
-    this.signUpbackground = signUpbackground;
     this.signup = signup;
+    this.usernameError = usernameError;
     this.usernameInput = usernameInput;
   }
 
@@ -110,6 +119,12 @@ public final class ActivitySignupBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.accountinfoError;
+      TextView accountinfoError = ViewBindings.findChildViewById(rootView, id);
+      if (accountinfoError == null) {
+        break missingId;
+      }
+
       id = R.id.alreadyHaveAccount;
       TextView alreadyHaveAccount = ViewBindings.findChildViewById(rootView, id);
       if (alreadyHaveAccount == null) {
@@ -134,6 +149,12 @@ public final class ActivitySignupBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.loginBackground;
+      ImageView loginBackground = ViewBindings.findChildViewById(rootView, id);
+      if (loginBackground == null) {
+        break missingId;
+      }
+
       id = R.id.loginInstead;
       TextView loginInstead = ViewBindings.findChildViewById(rootView, id);
       if (loginInstead == null) {
@@ -152,15 +173,15 @@ public final class ActivitySignupBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.signUpbackground;
-      ImageView signUpbackground = ViewBindings.findChildViewById(rootView, id);
-      if (signUpbackground == null) {
-        break missingId;
-      }
-
       id = R.id.signup;
       Button signup = ViewBindings.findChildViewById(rootView, id);
       if (signup == null) {
+        break missingId;
+      }
+
+      id = R.id.usernameError;
+      TextView usernameError = ViewBindings.findChildViewById(rootView, id);
+      if (usernameError == null) {
         break missingId;
       }
 
@@ -170,9 +191,9 @@ public final class ActivitySignupBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivitySignupBinding((ConstraintLayout) rootView, accountinfo, alreadyHaveAccount,
-          emailInput, linearLayout, linearLayout2, loginInstead, passwordInput, pickusername,
-          signUpbackground, signup, usernameInput);
+      return new ActivitySignupBinding((ConstraintLayout) rootView, accountinfo, accountinfoError,
+          alreadyHaveAccount, emailInput, linearLayout, linearLayout2, loginBackground,
+          loginInstead, passwordInput, pickusername, signup, usernameError, usernameInput);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
