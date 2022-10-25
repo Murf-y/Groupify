@@ -22,16 +22,16 @@
         android:testOnly="true"
         android:theme="@style/Theme.Groupify" >
         <activity
-            android:name="com.murfy.groupify.Login"
+            android:name="com.murfy.groupify.activities.Login"
             android:exported="false" />
         <activity
-            android:name="com.murfy.groupify.Signup"
+            android:name="com.murfy.groupify.activities.Signup"
             android:exported="false" />
         <activity
-            android:name="com.murfy.groupify.OnBoardThree"
+            android:name="com.murfy.groupify.activities.OnBoardThree"
             android:exported="false" />
         <activity
-            android:name="com.murfy.groupify.OnBoardTwo"
+            android:name="com.murfy.groupify.activities.OnBoardTwo"
             android:exported="false" />
         <activity
             android:name="com.murfy.groupify.activities.OnBoardOne"

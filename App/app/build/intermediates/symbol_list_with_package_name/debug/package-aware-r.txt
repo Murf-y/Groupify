@@ -2457,12 +2457,12 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable button
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
-drawable ic_background
 drawable ic_clock_black_24dp
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
@@ -2517,8 +2517,13 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable on_board_next_btn
+drawable on_board_one_background
 drawable on_board_one_dots
 drawable on_board_one_foreground
+drawable on_board_three_background
+drawable on_board_two_background
+drawable on_board_two_dots
+drawable on_board_two_foreground
 drawable splash_screen_circle
 drawable splash_screen_circle2
 drawable splash_screen_circle3
@@ -2606,6 +2611,7 @@ id alertTitle
 id aligned
 id all
 id allStates
+id alreadyHaveAccount
 id always
 id animateToEnd
 id animateToStart
@@ -2742,6 +2748,7 @@ id forever
 id fragment_container_view_tag
 id frost
 id fullscreen_header
+id getStartedBtn
 id ghost_view
 id ghost_view_holder
 id gone
@@ -2782,6 +2789,7 @@ id line3
 id linear
 id listMode
 id list_item
+id loginInstead
 id logo_b
 id masked
 id match_constraint
@@ -2862,7 +2870,11 @@ id off
 id on
 id onBoardOneDots
 id onBoardOneNext
+id onBoardTwoDots
+id onBoardTwoNext
 id onBoardinOneText
+id onBoardinThreeText
+id onBoardinTwoText
 id onInterceptTouchReturnSwipe
 id outline
 id outward

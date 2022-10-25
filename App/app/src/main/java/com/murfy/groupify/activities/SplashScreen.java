@@ -6,7 +6,9 @@ import android.app.ActionBar;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.transition.Explode;
 import android.view.View;
+import android.view.Window;
 import android.view.WindowManager;
 
 import com.murfy.groupify.databinding.ActivitySplashScreenBinding;

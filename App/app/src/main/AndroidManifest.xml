@@ -14,16 +14,16 @@
         android:theme="@style/Theme.Groupify"
         tools:targetApi="31">
         <activity
-            android:name=".Login"
+            android:name=".activities.Login"
             android:exported="false" />
         <activity
-            android:name=".Signup"
+            android:name=".activities.Signup"
             android:exported="false" />
         <activity
-            android:name=".OnBoardThree"
+            android:name=".activities.OnBoardThree"
             android:exported="false" />
         <activity
-            android:name=".OnBoardTwo"
+            android:name=".activities.OnBoardTwo"
             android:exported="false" />
         <activity
             android:name=".activities.OnBoardOne"

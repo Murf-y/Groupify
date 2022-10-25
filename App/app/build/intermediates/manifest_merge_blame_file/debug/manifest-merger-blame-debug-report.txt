@@ -35,26 +35,26 @@
 23-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:14:9-46
 24        <activity
 24-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:16:9-18:40
-25            android:name="com.murfy.groupify.Login"
-25-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:17:13-34
+25            android:name="com.murfy.groupify.activities.Login"
+25-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:17:13-45
 26            android:exported="false" />
 26-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:18:13-37
 27        <activity
 27-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:19:9-21:40
-28            android:name="com.murfy.groupify.Signup"
-28-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:20:13-35
+28            android:name="com.murfy.groupify.activities.Signup"
+28-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:20:13-46
 29            android:exported="false" />
 29-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:21:13-37
 30        <activity
 30-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:22:9-24:40
-31            android:name="com.murfy.groupify.OnBoardThree"
-31-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:23:13-41
+31            android:name="com.murfy.groupify.activities.OnBoardThree"
+31-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:23:13-52
 32            android:exported="false" />
 32-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:24:13-37
 33        <activity
 33-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:25:9-27:40
-34            android:name="com.murfy.groupify.OnBoardTwo"
-34-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:26:13-39
+34            android:name="com.murfy.groupify.activities.OnBoardTwo"
+34-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:26:13-50
 35            android:exported="false" />
 35-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:27:13-37
 36        <activity
