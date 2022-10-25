@@ -2,6 +2,7 @@ package com.murfy.groupify.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -15,5 +16,14 @@ public class OnBoardThree extends AppCompatActivity {
         ActivityOnBoardThreeBinding binding = ActivityOnBoardThreeBinding.inflate(getLayoutInflater());
         View root = binding.getRoot();
         setContentView(root);
+
+        binding.getStartedBtn.setOnClickListener(view -> {
+            Intent i = new Intent(getApplicationContext(), Signup.class);
+            startActivity(i);
+        });
+        binding.loginInstead.setOnClickListener(view -> {
+            Intent i = new Intent(getApplicationContext(), Login.class);
+            startActivity(i);
+        });
     }
 }

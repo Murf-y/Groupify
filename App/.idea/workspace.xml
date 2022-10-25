@@ -13,21 +13,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8fde9c6-a444-4273-abca-c37e9c5fe4d9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v24/logo_w.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/button.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/on_board_three_background.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/on_board_two_background.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/on_board_two_dots.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/on_board_two_foreground.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/murfy/groupify/activities/OnBoardOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/murfy/groupify/activities/OnBoardOne.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/murfy/groupify/activities/OnBoardTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/murfy/groupify/activities/OnBoardTwo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/on_board_one_background.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_on_board_one.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_on_board_one.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/murfy/groupify/activities/OnBoardThree.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/murfy/groupify/activities/OnBoardThree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_on_board_three.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_on_board_three.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_on_board_two.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_on_board_two.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
