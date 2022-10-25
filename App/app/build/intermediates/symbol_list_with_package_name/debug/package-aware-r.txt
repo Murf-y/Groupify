@@ -2474,6 +2474,7 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable input
 drawable logo_b
 drawable m3_appbar_background
 drawable m3_popupmenu_background_overlay
@@ -2524,6 +2525,9 @@ drawable on_board_three_background
 drawable on_board_two_background
 drawable on_board_two_dots
 drawable on_board_two_foreground
+drawable signup_background
+drawable signup_eye
+drawable signup_eye_closed
 drawable splash_screen_circle
 drawable splash_screen_circle2
 drawable splash_screen_circle3
@@ -2584,6 +2588,7 @@ id accessibility_custom_action_6
 id accessibility_custom_action_7
 id accessibility_custom_action_8
 id accessibility_custom_action_9
+id accountinfo
 id actionDown
 id actionDownUp
 id actionUp
@@ -2723,6 +2728,7 @@ id edit_query
 id edittext_dropdown_editable
 id edittext_dropdown_noneditable
 id elastic
+id emailInput
 id end
 id endToStart
 id enterAlways
@@ -2787,6 +2793,8 @@ id legacy
 id line1
 id line3
 id linear
+id linearLayout
+id linearLayout2
 id listMode
 id list_item
 id loginInstead
@@ -2885,11 +2893,13 @@ id parent
 id parentPanel
 id parentRelative
 id parent_matrix
+id passwordInput
 id password_toggle
 id path
 id pathRelative
 id peekHeight
 id percent
+id pickusername
 id pin
 id position
 id postLayout
@@ -2934,6 +2944,8 @@ id shortcut
 id showCustom
 id showHome
 id showTitle
+id signUpbackground
+id signup
 id sin
 id skip
 id skipCollapsed
@@ -3022,6 +3034,7 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id usernameInput
 id vertical_only
 id view_offset_helper
 id view_transition
