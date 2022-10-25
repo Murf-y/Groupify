@@ -100,30 +100,30 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\US
 		ADDED from C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:14:9-46
 	android:dataExtractionRules
 		ADDED from C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:8:9-65
-activity#com.murfy.groupify.Login
+activity#com.murfy.groupify.activities.Login
 ADDED from C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:16:9-18:40
 	android:exported
 		ADDED from C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:18:13-37
 	android:name
-		ADDED from C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:17:13-34
-activity#com.murfy.groupify.Signup
+		ADDED from C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:17:13-45
+activity#com.murfy.groupify.activities.Signup
 ADDED from C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:19:9-21:40
 	android:exported
 		ADDED from C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:21:13-37
 	android:name
-		ADDED from C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:20:13-35
-activity#com.murfy.groupify.OnBoardThree
+		ADDED from C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:20:13-46
+activity#com.murfy.groupify.activities.OnBoardThree
 ADDED from C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:22:9-24:40
 	android:exported
 		ADDED from C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:24:13-37
 	android:name
-		ADDED from C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:23:13-41
-activity#com.murfy.groupify.OnBoardTwo
+		ADDED from C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:23:13-52
+activity#com.murfy.groupify.activities.OnBoardTwo
 ADDED from C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:25:9-27:40
 	android:exported
 		ADDED from C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:27:13-37
 	android:name
-		ADDED from C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:26:13-39
+		ADDED from C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:26:13-50
 activity#com.murfy.groupify.activities.OnBoardOne
 ADDED from C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:28:9-30:40
 	android:exported

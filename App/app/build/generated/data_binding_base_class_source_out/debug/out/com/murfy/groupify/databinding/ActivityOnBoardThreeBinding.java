@@ -4,20 +4,48 @@ package com.murfy.groupify.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.murfy.groupify.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
+import java.lang.String;
 
 public final class ActivityOnBoardThreeBinding implements ViewBinding {
   @NonNull
   private final ConstraintLayout rootView;
 
-  private ActivityOnBoardThreeBinding(@NonNull ConstraintLayout rootView) {
+  @NonNull
+  public final TextView alreadyHaveAccount;
+
+  @NonNull
+  public final ImageView background;
+
+  @NonNull
+  public final Button getStartedBtn;
+
+  @NonNull
+  public final TextView loginInstead;
+
+  @NonNull
+  public final TextView onBoardinThreeText;
+
+  private ActivityOnBoardThreeBinding(@NonNull ConstraintLayout rootView,
+      @NonNull TextView alreadyHaveAccount, @NonNull ImageView background,
+      @NonNull Button getStartedBtn, @NonNull TextView loginInstead,
+      @NonNull TextView onBoardinThreeText) {
     this.rootView = rootView;
+    this.alreadyHaveAccount = alreadyHaveAccount;
+    this.background = background;
+    this.getStartedBtn = getStartedBtn;
+    this.loginInstead = loginInstead;
+    this.onBoardinThreeText = onBoardinThreeText;
   }
 
   @Override
@@ -43,10 +71,44 @@ public final class ActivityOnBoardThreeBinding implements ViewBinding {
 
   @NonNull
   public static ActivityOnBoardThreeBinding bind(@NonNull View rootView) {
-    if (rootView == null) {
-      throw new NullPointerException("rootView");
-    }
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.alreadyHaveAccount;
+      TextView alreadyHaveAccount = ViewBindings.findChildViewById(rootView, id);
+      if (alreadyHaveAccount == null) {
+        break missingId;
+      }
 
-    return new ActivityOnBoardThreeBinding((ConstraintLayout) rootView);
+      id = R.id.background;
+      ImageView background = ViewBindings.findChildViewById(rootView, id);
+      if (background == null) {
+        break missingId;
+      }
+
+      id = R.id.getStartedBtn;
+      Button getStartedBtn = ViewBindings.findChildViewById(rootView, id);
+      if (getStartedBtn == null) {
+        break missingId;
+      }
+
+      id = R.id.loginInstead;
+      TextView loginInstead = ViewBindings.findChildViewById(rootView, id);
+      if (loginInstead == null) {
+        break missingId;
+      }
+
+      id = R.id.onBoardinThreeText;
+      TextView onBoardinThreeText = ViewBindings.findChildViewById(rootView, id);
+      if (onBoardinThreeText == null) {
+        break missingId;
+      }
+
+      return new ActivityOnBoardThreeBinding((ConstraintLayout) rootView, alreadyHaveAccount,
+          background, getStartedBtn, loginInstead, onBoardinThreeText);
+    }
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }
