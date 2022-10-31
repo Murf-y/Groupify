@@ -41,37 +41,37 @@ public class Login extends AppCompatActivity {
         });
 
         binding.signup.setOnClickListener(view -> {
-            String email = binding.emailInput.getText().toString();
-            String password = binding.passwordInput.getText().toString();
-
-            if(!InputValidator.isEmailValid(email)){
-                binding.errorMessage.setText("Invalid format for email");
-                binding.errorMessage.setVisibility(View.VISIBLE);
-                AnimationHelper.getInstance().fadeIn(binding.errorMessage, 1000);
-                Delayer.getInstance().postAfter(() -> {
-                    AnimationHelper.getInstance().fadeOut(binding.errorMessage, 1000);
-                    Delayer.getInstance().postAfter(() -> {
-                        binding.errorMessage.setVisibility(View.GONE);
-                        return null;
-                    }, 1000);
-                    return null;
-                }, 5000);
-
-                return;
-            }else if(!InputValidator.isPasswordValid(password)){
-                binding.errorMessage.setText("Password must be at least 8 characters");
-                binding.errorMessage.setVisibility(View.VISIBLE);
-                AnimationHelper.getInstance().fadeIn(binding.errorMessage, 1000);
-                Delayer.getInstance().postAfter(() -> {
-                    AnimationHelper.getInstance().fadeOut(binding.errorMessage, 1000);
-                    Delayer.getInstance().postAfter(() -> {
-                        binding.errorMessage.setVisibility(View.GONE);
-                        return null;
-                    }, 1000);
-                    return null;
-                }, 5000);
-                return;
-            }
+//            String email = binding.emailInput.getText().toString();
+//            String password = binding.passwordInput.getText().toString();
+//
+//            if(!InputValidator.isEmailValid(email)){
+//                binding.errorMessage.setText("Invalid format for email");
+//                binding.errorMessage.setVisibility(View.VISIBLE);
+//                AnimationHelper.getInstance().fadeIn(binding.errorMessage, 1000);
+//                Delayer.getInstance().postAfter(() -> {
+//                    AnimationHelper.getInstance().fadeOut(binding.errorMessage, 1000);
+//                    Delayer.getInstance().postAfter(() -> {
+//                        binding.errorMessage.setVisibility(View.GONE);
+//                        return null;
+//                    }, 1000);
+//                    return null;
+//                }, 5000);
+//
+//                return;
+//            }else if(!InputValidator.isPasswordValid(password)){
+//                binding.errorMessage.setText("Password must be at least 8 characters");
+//                binding.errorMessage.setVisibility(View.VISIBLE);
+//                AnimationHelper.getInstance().fadeIn(binding.errorMessage, 1000);
+//                Delayer.getInstance().postAfter(() -> {
+//                    AnimationHelper.getInstance().fadeOut(binding.errorMessage, 1000);
+//                    Delayer.getInstance().postAfter(() -> {
+//                        binding.errorMessage.setVisibility(View.GONE);
+//                        return null;
+//                    }, 1000);
+//                    return null;
+//                }, 5000);
+//                return;
+//            }
             Intent i = new Intent(getApplicationContext(), HomeActivity.class);
             startActivity(i);
 

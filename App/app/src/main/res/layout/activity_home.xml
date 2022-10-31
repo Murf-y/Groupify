@@ -102,6 +102,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
+        android:fontFamily="@font/worksans_regular"
         android:text="Looks like you did not join any groups yet.\n Head to explore to find new groups or create your own!"
         android:textAlignment="center"
         android:textColor="?attr/colorSecondary"
@@ -166,7 +167,7 @@
             android:orientation="horizontal">
 
             <ImageButton
-                android:id="@+id/favoriteButton"
+                android:id="@+id/searchButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0"

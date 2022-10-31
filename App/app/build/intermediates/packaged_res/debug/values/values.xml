@@ -13,7 +13,7 @@
     <color name="white_100">#FBFEFF</color>
     <color name="white_200">#EEF0F5</color>
     <string name="app_name">Groupify</string>
-    <style name="Theme.Groupify" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.Groupify" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/green_500</item>
         <item name="colorPrimaryVariant">@color/green_400</item>
         <item name="colorOnPrimary">@color/green_600</item>
