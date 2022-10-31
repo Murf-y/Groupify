@@ -56,6 +56,8 @@ public class Login extends AppCompatActivity {
                     }, 1000);
                     return null;
                 }, 5000);
+
+                return;
             }else if(!InputValidator.isPasswordValid(password)){
                 binding.errorMessage.setText("Password must be at least 8 characters");
                 binding.errorMessage.setVisibility(View.VISIBLE);
@@ -68,11 +70,10 @@ public class Login extends AppCompatActivity {
                     }, 1000);
                     return null;
                 }, 5000);
+                return;
             }
-            else{
-                Intent i = new Intent(getApplicationContext(), HomeActivity.class);
-                startActivity(i);
-            }
+            Intent i = new Intent(getApplicationContext(), HomeActivity.class);
+            startActivity(i);
 
             // proceed with login procedure
 
