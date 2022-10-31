@@ -2447,6 +2447,8 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable add_image_square
+drawable arrow_left
 drawable avd_hide_password
 drawable avd_show_password
 drawable bottom_nav_bar
@@ -2459,11 +2461,14 @@ drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable button
+drawable circle
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable disabled_button
+drawable group_default_image
 drawable home_empty_state
 drawable home_line_separator
 drawable home_notifications_bell
@@ -2536,6 +2541,7 @@ drawable on_board_two_background
 drawable on_board_two_dots
 drawable on_board_two_foreground
 drawable profile_avatar_default
+drawable search_bar_search_icon
 drawable signup_background
 drawable signup_eye
 drawable signup_eye_closed
@@ -2548,6 +2554,7 @@ drawable test_custom_background
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable top_search_bar
 font worksans_light
 font worksans_medium
 font worksans_regular
@@ -2625,6 +2632,9 @@ id actions
 id activity_chooser_view_content
 id add
 id addButton
+id addImageButton
+id addImageInput
+id addImageLabel
 id alertTitle
 id aligned
 id all
@@ -2643,6 +2653,7 @@ id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
 id avatar
+id backArrow
 id background
 id barrier
 id baseline
@@ -2658,6 +2669,7 @@ id bounceStart
 id buttonPanel
 id cache_measures
 id callMeasure
+id cancelBtn
 id cancel_button
 id carryVelocity
 id center
@@ -2699,6 +2711,7 @@ id continuousVelocity
 id coordinator
 id cos
 id counterclockwise
+id createBtn
 id currentState
 id custom
 id customPanel
@@ -2755,7 +2768,6 @@ id expand_activities_button
 id expanded_menu
 id explore
 id fade
-id favoriteButton
 id fill
 id fill_horizontal
 id fill_vertical
@@ -2779,6 +2791,8 @@ id ghost_view_holder
 id gone
 id graph
 id graph_wrap
+id groupDescriptionInput
+id groupNameInput
 id group_divider
 id grouping
 id groups
@@ -2796,6 +2810,7 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imagePreview
 id immediateStop
 id included
 id info
@@ -2817,6 +2832,7 @@ id linearLayout
 id linearLayout2
 id linearLayout3
 id linearLayout4
+id linearLayout5
 id listMode
 id list_item
 id loginBackground
@@ -2933,6 +2949,8 @@ id progress_circular
 id progress_horizontal
 id radio
 id ratio
+id recentSearchesList
+id recentText
 id rectangles
 id reverseSawtooth
 id right
@@ -2951,6 +2969,8 @@ id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
 id scrollable
+id searchBar
+id searchButton
 id search_badge
 id search_bar
 id search_button
@@ -3031,6 +3051,7 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textView
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3047,6 +3068,7 @@ id title_template
 id toggle
 id top
 id topPanel
+id top_bar
 id touch_outside
 id transitionToEnd
 id transitionToStart
@@ -3173,11 +3195,13 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_create_group
 layout activity_home
 layout activity_login
 layout activity_on_board_one
 layout activity_on_board_three
 layout activity_on_board_two
+layout activity_search
 layout activity_signup
 layout activity_splash_screen
 layout custom_dialog
