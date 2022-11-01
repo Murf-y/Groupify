@@ -16,5 +16,6 @@ if (!usernameExists($connection, $username) || !passmatch($connection, $hashedpa
     exit();
 }
 
-$obj = array("status" => 200);
-echo(json_encode($obj));
+$status = array("status" => 200);
+$response = array_merge($status, getuserinfo($connection, $username));
+echo(json_encode($response));
