@@ -27,7 +27,7 @@ $sql = "INSERT INTO users(username, password, email, bio, profile_photo) VALUES 
 $stmt = mysqli_stmt_init($connection);
 mysqli_stmt_prepare($stmt, $sql);
 
-$hashedpass = password_hash($pass, PASSWORD_DEFAULT);
+$hashedpass = md5($pass);
 
 mysqli_stmt_bind_param($stmt, "sssss", $username, $hashedpass, $email, $bio, $profile_picture);
 mysqli_stmt_execute($stmt);
