@@ -3201,6 +3201,7 @@ layout activity_login
 layout activity_on_board_one
 layout activity_on_board_three
 layout activity_on_board_two
+layout activity_profile
 layout activity_search
 layout activity_signup
 layout activity_splash_screen

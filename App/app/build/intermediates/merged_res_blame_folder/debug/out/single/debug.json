@@ -144,10 +144,6 @@
         "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-pngs-24:\\drawable-xxxhdpi\\nav_bar_home_grey.png"
     },
     {
-        "merged": "com.murfy.groupify.app-merged_res-29:/layout_activity_create_group.xml.flat",
-        "source": "com.murfy.groupify.app-main-31:/layout/activity_create_group.xml"
-    },
-    {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\drawable_home_notifications_bell.xml.flat",
         "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-main-31:\\drawable\\home_notifications_bell.xml"
     },
@@ -236,6 +232,10 @@
         "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-main-31:\\drawable\\add_image_square.xml"
     },
     {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\layout_activity_profile.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-main-31:\\layout\\activity_profile.xml"
+    },
+    {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\drawable_disabled_button.xml.flat",
         "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-main-31:\\drawable\\disabled_button.xml"
     },
@@ -274,6 +274,10 @@
     {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\drawable-hdpi_nav_bar_home.png.flat",
         "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-pngs-24:\\drawable-hdpi\\nav_bar_home.png"
+    },
+    {
+        "merged": "com.murfy.groupify.app-merged_res-29:/layout_activity_login.xml.flat",
+        "source": "com.murfy.groupify.app-main-31:/layout/activity_login.xml"
     },
     {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\mipmap-anydpi-v26_ic_launcher.xml.flat",

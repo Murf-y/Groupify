@@ -8,6 +8,8 @@
         android:minSdkVersion="23"
         android:targetSdkVersion="32" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -20,7 +22,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:testOnly="true"
-        android:theme="@style/Theme.Groupify" >
+        android:theme="@style/Theme.Groupify"
+        android:usesCleartextTraffic="true" >
+        <activity
+            android:name="com.murfy.groupify.activities.ProfileActivity"
+            android:exported="false" />
         <activity
             android:name="com.murfy.groupify.activities.CreateGroupActivity"
             android:exported="false" />
