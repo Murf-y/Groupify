@@ -42,3 +42,13 @@ function passmatch($connection, $pass, $username){
 
     return $row["password"] == $pass;
 }
+
+function getuserinfo($connection, $username){
+    
+    $query = $connection->prepare("SELECT * FROM users WHERE username = ?");
+    $query->bind_param("s", $username);
+    $query->execute();
+    $results = $query->get_result();
+
+    return $results->fetch_assoc();  
+}

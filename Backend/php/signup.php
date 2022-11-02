@@ -9,8 +9,6 @@ $pass =  $_POST["password"];
 $profile_picture = $_POST["profile_photo"];
 $bio = "Hey there! I am using Groupify.";
 
-$obj;
-
 
 if(usernameExists($connection, $username)){
     $obj = array("status" => 403, "message" => "username already taken");
@@ -35,5 +33,6 @@ mysqli_stmt_bind_param($stmt, "sssss", $username, $hashedpass, $email, $bio, $pr
 mysqli_stmt_execute($stmt);
 mysqli_stmt_close($stmt);
 
-$obj = array("status" => 200);
-echo (json_encode($obj));
+$response = array("status" => 200);
+$final = array_merge($response, getuserinfo($connection, $username));
+echo (json_encode($final));
