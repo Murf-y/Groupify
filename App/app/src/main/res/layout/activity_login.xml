@@ -40,12 +40,12 @@
             android:textColor="?attr/colorSecondary" />
 
         <EditText
-            android:id="@+id/emailInput"
+            android:id="@+id/usernameInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/input"
             android:ems="10"
-            android:hint="Email"
+            android:hint="Username"
             android:inputType="textPersonName"
             android:paddingLeft="10dp"
             android:paddingTop="18dp"

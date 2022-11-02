@@ -3,6 +3,7 @@ package com.murfy.groupify.activities;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
@@ -11,12 +12,20 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
+import com.android.volley.toolbox.Volley;
+import com.google.gson.Gson;
 import com.murfy.groupify.R;
+import com.murfy.groupify.api.CrudCallback;
+import com.murfy.groupify.api.CrudError;
+import com.murfy.groupify.api.UserApi;
 import com.murfy.groupify.customElements.DrawableClickListener;
 import com.murfy.groupify.databinding.ActivityLoginBinding;
+import com.murfy.groupify.models.User;
 import com.murfy.groupify.utils.AnimationHelper;
 import com.murfy.groupify.utils.Delayer;
 import com.murfy.groupify.utils.InputValidator;
+
+import java.util.Objects;
 
 public class Login extends AppCompatActivity {
 
@@ -41,41 +50,35 @@ public class Login extends AppCompatActivity {
         });
 
         binding.signup.setOnClickListener(view -> {
-//            String email = binding.emailInput.getText().toString();
-//            String password = binding.passwordInput.getText().toString();
-//
-//            if(!InputValidator.isEmailValid(email)){
-//                binding.errorMessage.setText("Invalid format for email");
-//                binding.errorMessage.setVisibility(View.VISIBLE);
-//                AnimationHelper.getInstance().fadeIn(binding.errorMessage, 1000);
-//                Delayer.getInstance().postAfter(() -> {
-//                    AnimationHelper.getInstance().fadeOut(binding.errorMessage, 1000);
-//                    Delayer.getInstance().postAfter(() -> {
-//                        binding.errorMessage.setVisibility(View.GONE);
-//                        return null;
-//                    }, 1000);
-//                    return null;
-//                }, 5000);
-//
-//                return;
-//            }else if(!InputValidator.isPasswordValid(password)){
-//                binding.errorMessage.setText("Password must be at least 8 characters");
-//                binding.errorMessage.setVisibility(View.VISIBLE);
-//                AnimationHelper.getInstance().fadeIn(binding.errorMessage, 1000);
-//                Delayer.getInstance().postAfter(() -> {
-//                    AnimationHelper.getInstance().fadeOut(binding.errorMessage, 1000);
-//                    Delayer.getInstance().postAfter(() -> {
-//                        binding.errorMessage.setVisibility(View.GONE);
-//                        return null;
-//                    }, 1000);
-//                    return null;
-//                }, 5000);
-//                return;
-//            }
-            Intent i = new Intent(getApplicationContext(), HomeActivity.class);
-            startActivity(i);
+            String username = binding.usernameInput.getText().toString();
+            String password = Objects.requireNonNull(binding.passwordInput.getText()).toString();
 
-            // proceed with login procedure
+            if(!InputValidator.isPasswordValid(password)){
+                binding.errorMessage.setText("Password must be at least 8 characters");
+                binding.errorMessage.setVisibility(View.VISIBLE);
+                AnimationHelper.getInstance().animateError(binding.errorMessage);
+            }else{
+                new UserApi(getApplicationContext()).login(username, password, new CrudCallback<User>() {
+                    @Override
+                    public void onSuccess(User user) {
+                        SharedPreferences shared = getSharedPreferences("groupify", MODE_PRIVATE);
+                        shared.edit().putString("current_user", new Gson().toJson(user)).apply();
+
+                        Intent i = new Intent(getApplicationContext(), HomeActivity.class);
+                        startActivity(i);
+                    }
+
+                    @Override
+                    public void onError(CrudError error) {
+                        binding.errorMessage.setText(error.getMessage());
+                        binding.errorMessage.setVisibility(View.VISIBLE);
+                        AnimationHelper.getInstance().animateError(binding.errorMessage);
+                    }
+                });
+            }
+
+//            Intent i = new Intent(getApplicationContext(), HomeActivity.class);
+//            startActivity(i);
 
         });
 
