@@ -31,9 +31,6 @@ public final class ActivityLoginBinding implements ViewBinding {
   public final TextView alreadyHaveAccount;
 
   @NonNull
-  public final EditText emailInput;
-
-  @NonNull
   public final TextView errorMessage;
 
   @NonNull
@@ -51,21 +48,24 @@ public final class ActivityLoginBinding implements ViewBinding {
   @NonNull
   public final TextView signupInstead;
 
+  @NonNull
+  public final EditText usernameInput;
+
   private ActivityLoginBinding(@NonNull ConstraintLayout rootView, @NonNull TextView accountinfo,
-      @NonNull TextView alreadyHaveAccount, @NonNull EditText emailInput,
-      @NonNull TextView errorMessage, @NonNull LinearLayout linearLayout2,
-      @NonNull ImageView loginBackground, @NonNull CustomEditText passwordInput,
-      @NonNull Button signup, @NonNull TextView signupInstead) {
+      @NonNull TextView alreadyHaveAccount, @NonNull TextView errorMessage,
+      @NonNull LinearLayout linearLayout2, @NonNull ImageView loginBackground,
+      @NonNull CustomEditText passwordInput, @NonNull Button signup,
+      @NonNull TextView signupInstead, @NonNull EditText usernameInput) {
     this.rootView = rootView;
     this.accountinfo = accountinfo;
     this.alreadyHaveAccount = alreadyHaveAccount;
-    this.emailInput = emailInput;
     this.errorMessage = errorMessage;
     this.linearLayout2 = linearLayout2;
     this.loginBackground = loginBackground;
     this.passwordInput = passwordInput;
     this.signup = signup;
     this.signupInstead = signupInstead;
+    this.usernameInput = usernameInput;
   }
 
   @Override
@@ -107,12 +107,6 @@ public final class ActivityLoginBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.emailInput;
-      EditText emailInput = ViewBindings.findChildViewById(rootView, id);
-      if (emailInput == null) {
-        break missingId;
-      }
-
       id = R.id.errorMessage;
       TextView errorMessage = ViewBindings.findChildViewById(rootView, id);
       if (errorMessage == null) {
@@ -149,9 +143,15 @@ public final class ActivityLoginBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.usernameInput;
+      EditText usernameInput = ViewBindings.findChildViewById(rootView, id);
+      if (usernameInput == null) {
+        break missingId;
+      }
+
       return new ActivityLoginBinding((ConstraintLayout) rootView, accountinfo, alreadyHaveAccount,
-          emailInput, errorMessage, linearLayout2, loginBackground, passwordInput, signup,
-          signupInstead);
+          errorMessage, linearLayout2, loginBackground, passwordInput, signup, signupInstead,
+          usernameInput);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

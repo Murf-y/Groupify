@@ -11,13 +11,13 @@ $bio = "Hey there! I am using Groupify.";
 
 
 if(usernameExists($connection, $username)){
-    $obj = array("status" => 403, "message" => "username already taken");
+    $obj = array("status" => 403, "message" => "Username already taken");
     echo(json_encode($obj));
     exit();
 }
 
 if(emailExists($connection, $email)){
-    $obj = array("status" => 403, "message" => "email already taken");
+    $obj = array("status" => 403, "message" => "Email already taken");
     echo(json_encode($obj));
     exit();
 }

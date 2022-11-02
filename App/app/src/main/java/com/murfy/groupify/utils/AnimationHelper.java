@@ -60,4 +60,18 @@ public class AnimationHelper {
         v.animate().scaleY((float) (v.getScaleY() * 0.8)).setDuration(duration);
         return getInstance();
     }
+
+    public AnimationHelper animateError(View error){
+        getInstance().fadeIn(error, 1000);
+        Delayer.getInstance().postAfter(() -> {
+            AnimationHelper.getInstance().fadeOut(error, 1000);
+            Delayer.getInstance().postAfter(() -> {
+                error.setVisibility(View.GONE);
+                return null;
+            }, 1000);
+            return null;
+        }, 5000);
+
+        return getInstance();
+    }
 }
