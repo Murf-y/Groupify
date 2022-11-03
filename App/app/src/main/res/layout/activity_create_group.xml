@@ -49,7 +49,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="18dp"
-        android:background="@drawable/input"
+        android:background="@drawable/add_image_input_box"
         android:gravity="center"
         android:orientation="vertical"
         android:paddingVertical="40dp"

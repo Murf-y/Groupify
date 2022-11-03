@@ -11,7 +11,7 @@
 9-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:6:5-83
+11-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:6:5-67
 11-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:6:22-64
 12
 13    <application
