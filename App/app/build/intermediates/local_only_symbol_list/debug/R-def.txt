@@ -19,12 +19,15 @@ drawable bottom_nav_bar
 drawable button
 drawable circle
 drawable disabled_button
+drawable group_card_members_icon
 drawable group_default_image
+drawable group_item_card
 drawable home_empty_state
 drawable home_line_separator
 drawable home_notifications_bell
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable image_border
 drawable input
 drawable login_background
 drawable logo_b
@@ -53,6 +56,7 @@ drawable splash_screen_circle2
 drawable splash_screen_circle3
 drawable splash_screen_circle4
 drawable splash_screen_circle5
+drawable testlol
 drawable top_search_bar
 font worksans_light
 font worksans_medium
@@ -75,6 +79,7 @@ id circleOne3
 id circleOne4
 id circleOne5
 id createBtn
+id createGroupError
 id editIcon
 id emailInput
 id empty_state_image
@@ -86,8 +91,12 @@ id frame
 id frame2
 id getStartedBtn
 id groupDescriptionInput
+id groupImageView
 id groupNameInput
+id groupNumberOfMembers
+id groupSubject
 id groups
+id groupsListView
 id homeButton
 id imagePreview
 id linearLayout
@@ -97,6 +106,7 @@ id linearLayout4
 id linearLayout5
 id linearLayout6
 id linearLayout7
+id linearLayout8
 id loginBackground
 id loginInstead
 id logo
@@ -143,6 +153,7 @@ layout activity_profile
 layout activity_search
 layout activity_signup
 layout activity_splash_screen
+layout group_list_item
 mipmap ic_launcher
 mipmap ic_launcher_round
 string app_name

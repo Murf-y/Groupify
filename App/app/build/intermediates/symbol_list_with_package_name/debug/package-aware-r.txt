@@ -2469,7 +2469,9 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable disabled_button
+drawable group_card_members_icon
 drawable group_default_image
+drawable group_item_card
 drawable home_empty_state
 drawable home_line_separator
 drawable home_notifications_bell
@@ -2484,6 +2486,7 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable image_border
 drawable input
 drawable login_background
 drawable logo_b
@@ -2555,6 +2558,7 @@ drawable splash_screen_circle4
 drawable splash_screen_circle5
 drawable test_custom_background
 drawable test_level_drawable
+drawable testlol
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable top_search_bar
@@ -2716,6 +2720,7 @@ id coordinator
 id cos
 id counterclockwise
 id createBtn
+id createGroupError
 id currentState
 id custom
 id customPanel
@@ -2799,10 +2804,14 @@ id gone
 id graph
 id graph_wrap
 id groupDescriptionInput
+id groupImageView
 id groupNameInput
+id groupNumberOfMembers
+id groupSubject
 id group_divider
 id grouping
 id groups
+id groupsListView
 id guideline
 id header_title
 id hideable
@@ -2842,6 +2851,7 @@ id linearLayout4
 id linearLayout5
 id linearLayout6
 id linearLayout7
+id linearLayout8
 id listMode
 id list_item
 id loginBackground
@@ -3239,6 +3249,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout group_list_item
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title

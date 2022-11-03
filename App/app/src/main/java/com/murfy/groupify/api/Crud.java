@@ -10,7 +10,7 @@ public class Crud {
     public static Crud instance;
     private final RequestQueue requestQueue;
 
-    public static final String base_url = "http://10.31.210.153/Groupify/Backend/php/";
+    public static final String base_url = "http://192.168.1.194/Groupify/Backend/php/";
 
     public Crud(Context context){
         requestQueue = Volley.newRequestQueue(context.getApplicationContext());

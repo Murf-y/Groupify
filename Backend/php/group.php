@@ -25,6 +25,7 @@ else if ($_SERVER['REQUEST_METHOD'] === 'GET') {
    // if there is a owner_id parameter, return all groups owned by that user
    // otherwise, return all groups
 
+
     if (isset($_GET["owner_id"])) {
         $ownerid = $_GET["owner_id"];
         $query = $connection->prepare("SELECT * FROM groups WHERE owner_id = ?");
@@ -32,10 +33,21 @@ else if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         $query->execute();
         $result = $query->get_result();
         $groups = array();
+
         while ($row = $result->fetch_assoc()) {
             $groups[] = $row;
         }
-        echo json_encode($groups);
+        
+        foreach ($groups as &$group) {
+            $groupid = $group["id"];
+            $query = $connection->prepare("SELECT COUNT(*) AS number_of_members FROM group_members WHERE group_id = ?");
+            $query->bind_param("i", $groupid);
+            $query->execute();
+            $result = $query->get_result();
+            $row = $result->fetch_assoc();
+            $group["number_of_members"] = $row["number_of_members"];
+        }
+        echo json_encode(array("status" => 200, "data" => $groups));
     }
     else {
         $query = $connection->prepare("SELECT * FROM groups");
@@ -45,6 +57,19 @@ else if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         while ($row = $result->fetch_assoc()) {
             $groups[] = $row;
         }
-        echo json_encode($groups);
+        // in each group, add the number of members (based on group_members table)
+
+        for ($i = 0; $i < count($groups); $i++) {
+            $groupid = $groups[$i]["id"];
+            $query = $connection->prepare("SELECT COUNT(*) AS number_of_members FROM group_members WHERE group_id = ?");
+            $query->bind_param("i", $groupid);
+            $query->execute();
+            $result = $query->get_result();
+            $row = $result->fetch_assoc();
+            $groups[$i]["number_of_members"] = $row["number_of_members"];
+        }
+
+        
+        echo json_encode(array("status" => 200, "data" => $groups));
     }
 }
