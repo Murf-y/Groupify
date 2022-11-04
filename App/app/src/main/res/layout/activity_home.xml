@@ -192,5 +192,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
         android:divider="@android:color/transparent"
-        android:dividerHeight="10.0sp"/>
+        android:dividerHeight="20.0sp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

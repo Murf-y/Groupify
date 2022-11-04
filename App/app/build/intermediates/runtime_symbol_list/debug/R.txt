@@ -2766,7 +2766,9 @@ int id edittext_dropdown_noneditable 0x7f0900c5
 int id elastic 0x7f0900c6
 int id emailInput 0x7f0900c7
 int id empty_state_image 0x7f0900c8
+int id empty_state_image2 0x7f090236
 int id empty_state_text 0x7f0900c9
+int id empty_state_text2 0x7f090237
 int id end 0x7f0900ca
 int id endToStart 0x7f0900cb
 int id enterAlways 0x7f0900cc
