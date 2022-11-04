@@ -3236,6 +3236,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_create_group
+layout activity_create_post
 layout activity_group
 layout activity_group_description
 layout activity_home

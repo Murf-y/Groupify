@@ -156,6 +156,7 @@ id username
 id usernameError
 id usernameInput
 layout activity_create_group
+layout activity_create_post
 layout activity_group
 layout activity_group_description
 layout activity_home
