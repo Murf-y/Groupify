@@ -4,16 +4,16 @@
         "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-main-31:\\layout\\group_list_item.xml"
     },
     {
-        "merged": "com.murfy.groupify.app-mergeDebugResources-28:/layout/recent_search_item.xml",
-        "source": "com.murfy.groupify.app-main-31:/layout/recent_search_item.xml"
-    },
-    {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-mergeDebugResources-28:\\layout\\activity_on_board_one.xml",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-main-31:\\layout\\activity_on_board_one.xml"
+        "merged": "com.murfy.groupify.app-mergeDebugResources-28:/layout/activity_group_description.xml",
+        "source": "com.murfy.groupify.app-main-31:/layout/activity_group_description.xml"
     },
     {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-mergeDebugResources-28:\\layout\\activity_signup.xml",
         "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-main-31:\\layout\\activity_signup.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-mergeDebugResources-28:\\layout\\activity_on_board_one.xml",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-main-31:\\layout\\activity_on_board_one.xml"
     },
     {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-mergeDebugResources-28:\\layout\\activity_on_board_three.xml",
@@ -26,6 +26,10 @@
     {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-mergeDebugResources-28:\\layout\\activity_splash_screen.xml",
         "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-main-31:\\layout\\activity_splash_screen.xml"
+    },
+    {
+        "merged": "com.murfy.groupify.app-mergeDebugResources-28:/layout/activity_group.xml",
+        "source": "com.murfy.groupify.app-main-31:/layout/activity_group.xml"
     },
     {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-mergeDebugResources-28:\\layout\\activity_home.xml",
@@ -46,6 +50,10 @@
     {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-mergeDebugResources-28:\\layout\\activity_on_board_two.xml",
         "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-main-31:\\layout\\activity_on_board_two.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-mergeDebugResources-28:\\layout\\activity_group.xml",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-main-31:\\layout\\activity_group.xml"
     },
     {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-mergeDebugResources-28:\\layout\\activity_profile.xml",

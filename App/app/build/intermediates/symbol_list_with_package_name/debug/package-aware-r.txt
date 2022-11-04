@@ -2449,6 +2449,7 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable add_image_input_box
 drawable add_image_square
+drawable add_post_icon
 drawable arrow_left
 drawable avd_hide_password
 drawable avd_show_password
@@ -2469,6 +2470,7 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable disabled_button
+drawable divider_transparent
 drawable group_card_members_icon
 drawable group_default_image
 drawable group_item_card
@@ -2548,6 +2550,7 @@ drawable profile_avatar_default
 drawable profile_edit_icon
 drawable profile_stats_box
 drawable search_bar_search_icon
+drawable send_message_icon
 drawable signup_background
 drawable signup_eye
 drawable signup_eye_closed
@@ -2558,7 +2561,6 @@ drawable splash_screen_circle4
 drawable splash_screen_circle5
 drawable test_custom_background
 drawable test_level_drawable
-drawable testlol
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable top_search_bar
@@ -2661,6 +2663,7 @@ id autoCompleteToEnd
 id autoCompleteToStart
 id avatar
 id backArrow
+id backArrow2
 id background
 id barrier
 id baseline
@@ -2807,8 +2810,10 @@ id graph
 id graph_wrap
 id groupDescriptionInput
 id groupImageView
+id groupName
 id groupNameInput
 id groupNumberOfMembers
+id groupPhoto
 id groupSubject
 id group_divider
 id grouping
@@ -2854,6 +2859,7 @@ id linearLayout5
 id linearLayout6
 id linearLayout7
 id linearLayout8
+id linearLayout9
 id listMode
 id list_item
 id loginBackground
@@ -2883,7 +2889,9 @@ id material_timepicker_ok_button
 id material_timepicker_view
 id material_value_index
 id matrix
+id membersCount
 id message
+id messageInput
 id messages
 id middle
 id mini
@@ -2919,6 +2927,7 @@ id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
 id mygroups
+id nameAndCount
 id navigation_bar_item_active_indicator_view
 id navigation_bar_item_icon_container
 id navigation_bar_item_icon_view
@@ -2971,6 +2980,7 @@ id pickusername
 id pin
 id position
 id postLayout
+id postablesList
 id posts
 id profileBackArrow
 id profileNotifications
@@ -3226,6 +3236,8 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_create_group
+layout activity_group
+layout activity_group_description
 layout activity_home
 layout activity_login
 layout activity_on_board_one
@@ -4506,6 +4518,7 @@ style Widget_MaterialComponents_Toolbar_PrimarySurface
 style Widget_MaterialComponents_Toolbar_Surface
 style Widget_MaterialComponents_Tooltip
 style Widget_Support_CoordinatorLayout
+style roundedImageViewRounded
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle
 styleable ActionBarLayout android_layout_gravity
 styleable ActionMenuItemView android_minWidth

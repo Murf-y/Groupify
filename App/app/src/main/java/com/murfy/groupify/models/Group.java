@@ -4,7 +4,9 @@ import android.graphics.Bitmap;
 
 import com.murfy.groupify.utils.ImageEncoding;
 
-public class Group {
+import java.io.Serializable;
+
+public class Group implements Serializable {
     private String id;
     private String subject;
     private String description;

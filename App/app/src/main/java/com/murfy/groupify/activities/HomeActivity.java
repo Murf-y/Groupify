@@ -28,7 +28,7 @@ public class HomeActivity extends AppCompatActivity {
 
 
     private User currentUser;
-
+    private ArrayList<Group> groups_list;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,7 +56,13 @@ public class HomeActivity extends AppCompatActivity {
             startActivity(i);
         });
 
+
         updateListView();
+        binding.groupsListView.setOnItemClickListener((adapterView, view, i, l) -> {
+            Intent intent = new Intent(getApplicationContext(), GroupActivity.class);
+            intent.putExtra("group", groups_list.get(i));
+            startActivity(intent);
+        });
     }
 
     public void changeSection(View v, boolean shouldShowMyGroups){
@@ -79,6 +85,7 @@ public class HomeActivity extends AppCompatActivity {
         CrudCallback<ArrayList<Group>> callback = new CrudCallback<ArrayList<Group>>() {
             @Override
             public void onSuccess(ArrayList<Group> groups) {
+                groups_list = groups;
                 if(groups.size() == 0){
                     binding.emptyStateText.setVisibility(View.VISIBLE);
                     binding.emptyStateImage.setVisibility(View.VISIBLE);

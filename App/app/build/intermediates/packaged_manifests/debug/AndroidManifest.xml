@@ -25,6 +25,12 @@
         android:theme="@style/Theme.Groupify"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="com.murfy.groupify.activities.GroupDescriptionActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.murfy.groupify.activities.GroupActivity"
+            android:exported="false" />
+        <activity
             android:name="com.murfy.groupify.activities.ProfileActivity"
             android:exported="false" />
         <activity

@@ -33,4 +33,8 @@
 
         <item name="android:statusBarColor" ns1:targetApi="l">@color/white_100</item>
     </style>
+    <style name="roundedImageViewRounded">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">45%</item>
+    </style>
 </resources>

@@ -2448,6 +2448,7 @@ int drawable abc_textfield_search_material 0x7f070054
 int drawable abc_vector_test 0x7f070055
 int drawable add_image_input_box 0x7f070056
 int drawable add_image_square 0x7f070057
+int drawable add_post_icon 0x7f0700c9
 int drawable arrow_left 0x7f070058
 int drawable avd_hide_password 0x7f070059
 int drawable avd_show_password 0x7f07005a
@@ -2468,6 +2469,7 @@ int drawable design_ic_visibility_off 0x7f070068
 int drawable design_password_eye 0x7f070069
 int drawable design_snackbar_background 0x7f07006a
 int drawable disabled_button 0x7f07006b
+int drawable divider_transparent 0x7f0700ca
 int drawable group_card_members_icon 0x7f0700c5
 int drawable group_default_image 0x7f07006c
 int drawable group_item_card 0x7f0700c6
@@ -2547,6 +2549,7 @@ int drawable profile_avatar_default 0x7f0700b4
 int drawable profile_edit_icon 0x7f0700b5
 int drawable profile_stats_box 0x7f0700b6
 int drawable search_bar_search_icon 0x7f0700b7
+int drawable send_message_icon 0x7f0700cb
 int drawable signup_background 0x7f0700b8
 int drawable signup_eye 0x7f0700b9
 int drawable signup_eye_closed 0x7f0700ba
@@ -2557,7 +2560,6 @@ int drawable splash_screen_circle4 0x7f0700be
 int drawable splash_screen_circle5 0x7f0700bf
 int drawable test_custom_background 0x7f0700c0
 int drawable test_level_drawable 0x7f0700c1
-int drawable testlol 0x7f0700c8
 int drawable tooltip_frame_dark 0x7f0700c2
 int drawable tooltip_frame_light 0x7f0700c3
 int drawable top_search_bar 0x7f0700c4
@@ -2660,6 +2662,7 @@ int id autoCompleteToEnd 0x7f09005c
 int id autoCompleteToStart 0x7f09005d
 int id avatar 0x7f09005e
 int id backArrow 0x7f09005f
+int id backArrow2 0x7f090239
 int id background 0x7f090060
 int id barrier 0x7f090061
 int id baseline 0x7f090062
@@ -2806,8 +2809,10 @@ int id graph 0x7f0900eb
 int id graph_wrap 0x7f0900ec
 int id groupDescriptionInput 0x7f0900ed
 int id groupImageView 0x7f090230
+int id groupName 0x7f09023b
 int id groupNameInput 0x7f0900ee
 int id groupNumberOfMembers 0x7f090231
+int id groupPhoto 0x7f09023c
 int id groupSubject 0x7f090232
 int id group_divider 0x7f0900ef
 int id grouping 0x7f0900f0
@@ -2853,6 +2858,7 @@ int id linearLayout5 0x7f090116
 int id linearLayout6 0x7f090117
 int id linearLayout7 0x7f090118
 int id linearLayout8 0x7f090235
+int id linearLayout9 0x7f09023f
 int id listMode 0x7f090119
 int id list_item 0x7f09011a
 int id loginBackground 0x7f09011b
@@ -2882,7 +2888,9 @@ int id material_timepicker_ok_button 0x7f090132
 int id material_timepicker_view 0x7f090133
 int id material_value_index 0x7f090134
 int id matrix 0x7f090135
+int id membersCount 0x7f090240
 int id message 0x7f090136
+int id messageInput 0x7f090242
 int id messages 0x7f090137
 int id middle 0x7f090138
 int id mini 0x7f090139
@@ -2918,6 +2926,7 @@ int id mtrl_picker_title_text 0x7f090156
 int id mtrl_view_tag_bottom_padding 0x7f090157
 int id multiply 0x7f090158
 int id mygroups 0x7f090159
+int id nameAndCount 0x7f090243
 int id navigation_bar_item_active_indicator_view 0x7f09015a
 int id navigation_bar_item_icon_container 0x7f09015b
 int id navigation_bar_item_icon_view 0x7f09015c
@@ -2970,6 +2979,7 @@ int id pickusername 0x7f09018a
 int id pin 0x7f09018b
 int id position 0x7f09018c
 int id postLayout 0x7f09018d
+int id postablesList 0x7f090241
 int id posts 0x7f09018e
 int id profileBackArrow 0x7f09018f
 int id profileNotifications 0x7f090190
@@ -3225,6 +3235,8 @@ int layout abc_search_view 0x7f0c0019
 int layout abc_select_dialog_material 0x7f0c001a
 int layout abc_tooltip 0x7f0c001b
 int layout activity_create_group 0x7f0c001c
+int layout activity_group 0x7f0c0082
+int layout activity_group_description 0x7f0c0083
 int layout activity_home 0x7f0c001d
 int layout activity_login 0x7f0c001e
 int layout activity_on_board_one 0x7f0c001f
@@ -4505,6 +4517,7 @@ int style Widget_MaterialComponents_Toolbar_PrimarySurface 0x7f10041a
 int style Widget_MaterialComponents_Toolbar_Surface 0x7f10041b
 int style Widget_MaterialComponents_Tooltip 0x7f10041c
 int style Widget_Support_CoordinatorLayout 0x7f10041d
+int style roundedImageViewRounded 0x7f10041e
 int[] styleable ActionBar { 0x7f030040, 0x7f030047, 0x7f030048, 0x7f03010b, 0x7f03010c, 0x7f03010d, 0x7f03010e, 0x7f03010f, 0x7f030110, 0x7f030136, 0x7f030147, 0x7f030148, 0x7f030167, 0x7f0301cf, 0x7f0301d6, 0x7f0301dc, 0x7f0301dd, 0x7f0301e1, 0x7f0301f2, 0x7f030207, 0x7f030281, 0x7f0302e7, 0x7f030317, 0x7f03031e, 0x7f03031f, 0x7f030383, 0x7f030387, 0x7f030405, 0x7f030412 }
 int styleable ActionBar_background 0
 int styleable ActionBar_backgroundSplit 1

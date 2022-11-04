@@ -14,11 +14,13 @@ color white_100
 color white_200
 drawable add_image_input_box
 drawable add_image_square
+drawable add_post_icon
 drawable arrow_left
 drawable bottom_nav_bar
 drawable button
 drawable circle
 drawable disabled_button
+drawable divider_transparent
 drawable group_card_members_icon
 drawable group_default_image
 drawable group_item_card
@@ -48,6 +50,7 @@ drawable profile_avatar_default
 drawable profile_edit_icon
 drawable profile_stats_box
 drawable search_bar_search_icon
+drawable send_message_icon
 drawable signup_background
 drawable signup_eye
 drawable signup_eye_closed
@@ -56,7 +59,6 @@ drawable splash_screen_circle2
 drawable splash_screen_circle3
 drawable splash_screen_circle4
 drawable splash_screen_circle5
-drawable testlol
 drawable top_search_bar
 font worksans_light
 font worksans_medium
@@ -70,6 +72,7 @@ id addImageLabel
 id alreadyHaveAccount
 id avatar
 id backArrow
+id backArrow2
 id background
 id bio
 id cancelBtn
@@ -94,8 +97,10 @@ id frame2
 id getStartedBtn
 id groupDescriptionInput
 id groupImageView
+id groupName
 id groupNameInput
 id groupNumberOfMembers
+id groupPhoto
 id groupSubject
 id groups
 id groupsListView
@@ -109,12 +114,16 @@ id linearLayout5
 id linearLayout6
 id linearLayout7
 id linearLayout8
+id linearLayout9
 id loginBackground
 id loginInstead
 id logo
 id logo_b
+id membersCount
+id messageInput
 id messages
 id mygroups
+id nameAndCount
 id notifications
 id numberOfGroups
 id numberOfMessages
@@ -129,6 +138,7 @@ id onBoardinTwoText
 id passwordInput
 id pic
 id pickusername
+id postablesList
 id posts
 id profileBackArrow
 id profileNotifications
@@ -146,6 +156,8 @@ id username
 id usernameError
 id usernameInput
 layout activity_create_group
+layout activity_group
+layout activity_group_description
 layout activity_home
 layout activity_login
 layout activity_on_board_one
@@ -160,5 +172,6 @@ mipmap ic_launcher
 mipmap ic_launcher_round
 string app_name
 style Theme.Groupify
+style roundedImageViewRounded
 xml backup_rules
 xml data_extraction_rules
