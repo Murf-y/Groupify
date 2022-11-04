@@ -1,8 +1,9 @@
-#Wed Nov 02 12:50:55 EET 2022
+#Fri Nov 04 12:17:39 EET 2022
 path.4=4/classes.dex
 path.3=1/classes.dex
 path.2=12/classes.dex
 path.1=0/classes.dex
+path.7=9/classes.dex
 path.6=7/classes.dex
 path.5=5/classes.dex
 path.0=classes.dex
@@ -15,7 +16,9 @@ renamed.3=classes4.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
+renamed.7=classes8.dex
 renamed.6=classes7.dex
+base.7=C\:\\xampp\\htdocs\\Groupify\\App\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\9\\classes.dex
 renamed.5=classes6.dex
 base.6=C\:\\xampp\\htdocs\\Groupify\\App\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\7\\classes.dex
 renamed.4=classes5.dex

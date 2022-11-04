@@ -6,6 +6,37 @@
     android:layout_height="match_parent"
     tools:context=".activities.SearchActivity">
 
+    <ImageView
+        android:id="@+id/empty_state_image2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5"
+        app:layout_constraintVertical_bias="0.25"
+        app:srcCompat="@drawable/home_empty_state" />
+
+    <TextView
+        android:id="@+id/empty_state_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:fontFamily="@font/worksans_regular"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="Looks like no groups matches your search!"
+        android:textAlignment="center"
+        android:textColor="?attr/colorSecondary"
+        android:textSize="18sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/empty_state_image2"
+        app:layout_constraintVertical_bias="0.1" />
+
     <LinearLayout
         android:id="@+id/linearLayout5"
         android:layout_width="match_parent"
@@ -130,6 +161,12 @@
         android:id="@+id/recentSearchesList"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="20.0sp"
+        android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -2447,6 +2447,7 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable add_image_input_box
 drawable add_image_square
 drawable arrow_left
 drawable avd_hide_password
@@ -2468,7 +2469,9 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable disabled_button
+drawable group_card_members_icon
 drawable group_default_image
+drawable group_item_card
 drawable home_empty_state
 drawable home_line_separator
 drawable home_notifications_bell
@@ -2483,6 +2486,7 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable image_border
 drawable input
 drawable login_background
 drawable logo_b
@@ -2541,6 +2545,8 @@ drawable on_board_two_background
 drawable on_board_two_dots
 drawable on_board_two_foreground
 drawable profile_avatar_default
+drawable profile_edit_icon
+drawable profile_stats_box
 drawable search_bar_search_icon
 drawable signup_background
 drawable signup_eye
@@ -2552,6 +2558,7 @@ drawable splash_screen_circle4
 drawable splash_screen_circle5
 drawable test_custom_background
 drawable test_level_drawable
+drawable testlol
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable top_search_bar
@@ -2660,6 +2667,7 @@ id baseline
 id beginOnFirstDraw
 id beginning
 id bestChoice
+id bio
 id blocking
 id bottom
 id bounce
@@ -2712,6 +2720,7 @@ id coordinator
 id cos
 id counterclockwise
 id createBtn
+id createGroupError
 id currentState
 id custom
 id customPanel
@@ -2751,13 +2760,16 @@ id easeIn
 id easeInOut
 id easeOut
 id east
+id editIcon
 id edit_query
 id edittext_dropdown_editable
 id edittext_dropdown_noneditable
 id elastic
 id emailInput
 id empty_state_image
+id empty_state_image2
 id empty_state_text
+id empty_state_text2
 id end
 id endToStart
 id enterAlways
@@ -2783,6 +2795,8 @@ id floating
 id foreground
 id forever
 id fragment_container_view_tag
+id frame
+id frame2
 id frost
 id fullscreen_header
 id getStartedBtn
@@ -2792,10 +2806,14 @@ id gone
 id graph
 id graph_wrap
 id groupDescriptionInput
+id groupImageView
 id groupNameInput
+id groupNumberOfMembers
+id groupSubject
 id group_divider
 id grouping
 id groups
+id groupsListView
 id guideline
 id header_title
 id hideable
@@ -2833,6 +2851,9 @@ id linearLayout2
 id linearLayout3
 id linearLayout4
 id linearLayout5
+id linearLayout6
+id linearLayout7
+id linearLayout8
 id listMode
 id list_item
 id loginBackground
@@ -2863,6 +2884,7 @@ id material_timepicker_view
 id material_value_index
 id matrix
 id message
+id messages
 id middle
 id mini
 id month_grid
@@ -2916,6 +2938,9 @@ id notification_background
 id notification_main_column
 id notification_main_column_container
 id notifications
+id numberOfGroups
+id numberOfMessages
+id numberOfPosts
 id off
 id on
 id onBoardOneDots
@@ -2941,10 +2966,14 @@ id path
 id pathRelative
 id peekHeight
 id percent
+id pic
 id pickusername
 id pin
 id position
 id postLayout
+id posts
+id profileBackArrow
+id profileNotifications
 id progress_circular
 id progress_horizontal
 id radio
@@ -3083,6 +3112,7 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id username
 id usernameError
 id usernameInput
 id vertical_only
@@ -3221,6 +3251,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout group_list_item
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title

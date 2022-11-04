@@ -7,12 +7,9 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
-import android.transition.Explode;
 import android.view.View;
-import android.view.Window;
 import android.view.WindowManager;
 
-import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
 import com.murfy.groupify.R;
 import com.murfy.groupify.api.CrudCallback;
@@ -22,14 +19,13 @@ import com.murfy.groupify.customElements.DrawableClickListener;
 import com.murfy.groupify.databinding.ActivityLoginBinding;
 import com.murfy.groupify.models.User;
 import com.murfy.groupify.utils.AnimationHelper;
-import com.murfy.groupify.utils.Delayer;
 import com.murfy.groupify.utils.InputValidator;
 
 import java.util.Objects;
 
 public class Login extends AppCompatActivity {
 
-    boolean show_pass = false;
+    boolean showPass = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,9 +38,9 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(DrawablePosition target) {
                 if(target == DrawablePosition.RIGHT){
-                    show_pass = !show_pass;
-                    binding.passwordInput.setTransformationMethod(show_pass ? HideReturnsTransformationMethod.getInstance() : PasswordTransformationMethod.getInstance());
-                    binding.passwordInput.setCompoundDrawablesWithIntrinsicBounds(0, 0, show_pass ? R.drawable.signup_eye_closed : R.drawable.signup_eye,0);
+                    showPass = !showPass;
+                    binding.passwordInput.setTransformationMethod(showPass ? HideReturnsTransformationMethod.getInstance() : PasswordTransformationMethod.getInstance());
+                    binding.passwordInput.setCompoundDrawablesWithIntrinsicBounds(0, 0, showPass ? R.drawable.signup_eye_closed : R.drawable.signup_eye,0);
                 }
             }
         });

@@ -8,14 +8,12 @@ import com.android.volley.toolbox.Volley;
 
 public class Crud {
     public static Crud instance;
-    private RequestQueue requestQueue;
-    private Context context;
+    private final RequestQueue requestQueue;
 
-    public static final String base_url = "http://10.31.202.38/groupify/Backend/php/";
+    public static final String base_url = "http://10.31.201.85/Groupify/Backend/php/";
 
     public Crud(Context context){
-         this.context = context;
-         requestQueue = Volley.newRequestQueue(context.getApplicationContext());
+        requestQueue = Volley.newRequestQueue(context.getApplicationContext());
     }
 
     public RequestQueue getRequestQueue(){

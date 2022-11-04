@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\drawable-xxhdpi_search_bar_search_icon.png.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-pngs-24:\\drawable-xxhdpi\\search_bar_search_icon.png"
+    },
+    {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\drawable-xxxhdpi_home_line_separator.png.flat",
         "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-pngs-24:\\drawable-xxxhdpi\\home_line_separator.png"
     },
@@ -8,20 +12,20 @@
         "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-main-31:\\drawable\\splash_screen_circle.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\drawable-xxhdpi_search_bar_search_icon.png.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-pngs-24:\\drawable-xxhdpi\\search_bar_search_icon.png"
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\drawable_add_image_input_box.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-main-31:\\drawable\\add_image_input_box.xml"
     },
     {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\drawable_signup_eye_closed.xml.flat",
         "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-main-31:\\drawable\\signup_eye_closed.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\drawable-anydpi-v24_home_line_separator.xml.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-pngs-24:\\drawable-anydpi-v24\\home_line_separator.xml"
-    },
-    {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\mipmap-mdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-main-31:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\drawable-anydpi-v24_home_line_separator.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-pngs-24:\\drawable-anydpi-v24\\home_line_separator.xml"
     },
     {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\layout_activity_splash_screen.xml.flat",
@@ -32,12 +36,20 @@
         "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-pngs-24:\\drawable-anydpi-v24\\search_bar_search_icon.xml"
     },
     {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\drawable_group_item_card.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-main-31:\\drawable\\group_item_card.xml"
+    },
+    {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\drawable_splash_screen_circle4.xml.flat",
         "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-main-31:\\drawable\\splash_screen_circle4.xml"
     },
     {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-main-31:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\drawable_signup_eye.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-main-31:\\drawable\\signup_eye.xml"
     },
     {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\drawable_on_board_one_foreground.xml.flat",
@@ -48,24 +60,16 @@
         "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-pngs-24:\\drawable-mdpi\\nav_bar_search.png"
     },
     {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\drawable_signup_eye.xml.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-main-31:\\drawable\\signup_eye.xml"
-    },
-    {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\drawable_top_search_bar.xml.flat",
         "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-main-31:\\drawable\\top_search_bar.xml"
-    },
-    {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\drawable-xhdpi_search_bar_search_icon.png.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-pngs-24:\\drawable-xhdpi\\search_bar_search_icon.png"
     },
     {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\drawable_circle.xml.flat",
         "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-main-31:\\drawable\\circle.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\drawable_create_group_image_input.xml.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-main-31:\\drawable\\create_group_image_input.xml"
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\drawable-xhdpi_search_bar_search_icon.png.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-pngs-24:\\drawable-xhdpi\\search_bar_search_icon.png"
     },
     {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\drawable_on_board_two_foreground.xml.flat",
@@ -132,12 +136,12 @@
         "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-pngs-24:\\drawable-hdpi\\home_line_separator.png"
     },
     {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\drawable-xhdpi_nav_bar_search_grey.png.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-pngs-24:\\drawable-xhdpi\\nav_bar_search_grey.png"
-    },
-    {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\drawable_signup_background.xml.flat",
         "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-main-31:\\drawable\\signup_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\drawable-xhdpi_nav_bar_search_grey.png.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-pngs-24:\\drawable-xhdpi\\nav_bar_search_grey.png"
     },
     {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\drawable-xxxhdpi_nav_bar_home_grey.png.flat",
@@ -172,12 +176,12 @@
         "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-pngs-24:\\drawable-anydpi-v24\\nav_bar_search_grey.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\drawable_on_board_one_background.xml.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-main-31:\\drawable\\on_board_one_background.xml"
-    },
-    {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\layout_activity_on_board_one.xml.flat",
         "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-main-31:\\layout\\activity_on_board_one.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\drawable_on_board_one_background.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-main-31:\\drawable\\on_board_one_background.xml"
     },
     {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\drawable-ldpi_nav_bar_home.png.flat",
@@ -200,12 +204,20 @@
         "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-pngs-24:\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
     },
     {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\drawable-v24_testlol.png.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-main-31:\\drawable-v24\\testlol.png"
+    },
+    {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\mipmap-xhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-main-31:\\mipmap-xhdpi\\ic_launcher.webp"
     },
     {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\drawable-mdpi_nav_bar_search_grey.png.flat",
         "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-pngs-24:\\drawable-mdpi\\nav_bar_search_grey.png"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\drawable_profile_stats_box.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-main-31:\\drawable\\profile_stats_box.xml"
     },
     {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\layout_activity_on_board_two.xml.flat",
@@ -230,6 +242,10 @@
     {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\drawable_add_image_square.xml.flat",
         "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-main-31:\\drawable\\add_image_square.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\drawable_image_border.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-main-31:\\drawable\\image_border.xml"
     },
     {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\layout_activity_profile.xml.flat",
@@ -260,12 +276,12 @@
         "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-main-31:\\mipmap-mdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\drawable-ldpi_nav_bar_home_grey.png.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-pngs-24:\\drawable-ldpi\\nav_bar_home_grey.png"
-    },
-    {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\font_worksans_regular.ttf.flat",
         "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-main-31:\\font\\worksans_regular.ttf"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\drawable-ldpi_nav_bar_home_grey.png.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-pngs-24:\\drawable-ldpi\\nav_bar_home_grey.png"
     },
     {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\drawable-xhdpi_nav_bar_home.png.flat",
@@ -274,10 +290,6 @@
     {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\drawable-hdpi_nav_bar_home.png.flat",
         "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-pngs-24:\\drawable-hdpi\\nav_bar_home.png"
-    },
-    {
-        "merged": "com.murfy.groupify.app-merged_res-29:/layout_activity_login.xml.flat",
-        "source": "com.murfy.groupify.app-main-31:/layout/activity_login.xml"
     },
     {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
@@ -290,6 +302,10 @@
     {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-main-31:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\layout_recent_search_item.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-main-31:\\layout\\recent_search_item.xml"
     },
     {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\drawable_button.xml.flat",
@@ -314,6 +330,10 @@
     {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\drawable-hdpi_search_bar_search_icon.png.flat",
         "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-pngs-24:\\drawable-hdpi\\search_bar_search_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\drawable_group_card_members_icon.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-main-31:\\drawable\\group_card_members_icon.xml"
     },
     {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\drawable_input.xml.flat",
@@ -344,12 +364,12 @@
         "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-pngs-24:\\drawable-mdpi\\search_bar_search_icon.png"
     },
     {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\drawable_splash_screen_circle2.xml.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-main-31:\\drawable\\splash_screen_circle2.xml"
-    },
-    {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\drawable-xxxhdpi_nav_bar_home.png.flat",
         "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-pngs-24:\\drawable-xxxhdpi\\nav_bar_home.png"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\drawable_splash_screen_circle2.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-main-31:\\drawable\\splash_screen_circle2.xml"
     },
     {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
@@ -376,12 +396,20 @@
         "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-main-31:\\drawable\\on_board_one_dots.xml"
     },
     {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\drawable_profile_edit_icon.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-main-31:\\drawable\\profile_edit_icon.xml"
+    },
+    {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-main-31:\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
     {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\font_worksans_light.ttf.flat",
         "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-main-31:\\font\\worksans_light.ttf"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\layout_group_list_item.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-main-31:\\layout\\group_list_item.xml"
     },
     {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.3.3\\com.murfy.groupify.app-merged_res-29:\\drawable-xxxhdpi_nav_bar_search_grey.png.flat",

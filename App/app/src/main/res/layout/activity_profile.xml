@@ -6,4 +6,239 @@
     android:layout_height="match_parent"
     tools:context=".activities.ProfileActivity">
 
+    <ImageView
+        android:id="@+id/profileBackArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.35"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05"
+        app:srcCompat="@drawable/arrow_left" />
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05">
+
+        <ImageView
+            android:id="@+id/pic"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:srcCompat="@drawable/profile_avatar_default" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frame"
+        app:layout_constraintVertical_bias="0.05">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:text="Username"
+                android:textAlignment="viewEnd"
+                android:textColor="?attr/colorSecondary"
+                android:textSize="28sp" />
+
+            <FrameLayout
+                android:id="@+id/frame2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.05">
+
+                <ImageView
+                    android:id="@+id/editIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/profile_edit_icon"
+                    app:srcCompat="@drawable/profile_edit_icon" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/bio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Bio"
+            android:textAlignment="center"
+            android:textColor="?attr/colorTertiary"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout7"
+        android:layout_width="0dp"
+        android:layout_height="75dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/profile_stats_box"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6"
+        app:layout_constraintVertical_bias="0.1">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/numberOfGroups"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="745"
+                android:textAlignment="center"
+                android:textColor="?attr/colorSecondary"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/groups"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Groups"
+                android:textAlignment="center"
+                android:textColor="?attr/colorSecondary"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/numberOfMessages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="4.5k"
+                android:textAlignment="center"
+                android:textColor="?attr/colorSecondary"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/messages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Messages"
+                android:textAlignment="center"
+                android:textColor="?attr/colorSecondary"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/numberOfPosts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="145"
+                android:textAlignment="center"
+                android:textColor="?attr/colorSecondary"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/posts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Posts"
+                android:textAlignment="center"
+                android:textColor="?attr/colorSecondary"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout7"
+        app:layout_constraintVertical_bias="0.05">
+
+        <TextView
+            android:id="@+id/mygroups"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/worksans_medium"
+            android:text="My Groups"
+            android:textAlignment="viewEnd"
+            android:textColor="?attr/colorSecondary"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/seperator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/home_line_separator" />
+
+        <TextView
+            android:id="@+id/profileNotifications"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/worksans_medium"
+            android:text="Notifications"
+            android:textAlignment="viewStart"
+            android:textColor="?attr/colorTertiary"
+            android:textSize="18sp" />
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

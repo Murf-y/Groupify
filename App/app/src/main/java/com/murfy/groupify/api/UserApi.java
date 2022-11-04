@@ -47,7 +47,7 @@ public class UserApi {
     public void signUp(String username, String email, String password, final CrudCallback<User> callback){
         StringRequest stringRequest = new StringRequest(Request.Method.POST,
                 Crud.base_url + signup_path,
-                (Response.Listener<String>) response -> {
+                response -> {
                     try {
                         JSONObject res = new JSONObject(response);
                         int status = res.getInt("status");
@@ -86,7 +86,7 @@ public class UserApi {
     public void login(String username, String password, final CrudCallback<User> callback){
         StringRequest stringRequest = new StringRequest(Request.Method.POST,
                 Crud.base_url + login_path,
-                (Response.Listener<String>) response -> {
+                response -> {
                 Log.i("DEBUG", response);
                     try {
                         JSONObject res = new JSONObject(response);
