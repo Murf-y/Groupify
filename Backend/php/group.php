@@ -49,6 +49,32 @@ else if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         }
         echo json_encode(array("status" => 200, "data" => $groups));
     }
+    else if(isset($_GET["search_term"])){
+        $search_term = $_GET["search_term"];
+    
+        $query = $connection->prepare("SELECT * FROM groups WHERE subject LIKE ? ORDER BY (LENGTH(subject) - LENGTH(REPLACE(subject, ?, ''))) DESC");
+        $search_term = "%".$search_term."%";
+        $query->bind_param("ss", $search_term, $search_term);
+        $query->execute();
+        $result = $query->get_result();
+        $groups = array();
+        
+        while ($row = $result->fetch_assoc()) {
+            $groups[] = $row;
+        }
+
+        foreach ($groups as &$group) {
+            $groupid = $group["id"];
+            $query = $connection->prepare("SELECT COUNT(*) AS number_of_members FROM group_members WHERE group_id = ?");
+            $query->bind_param("i", $groupid);
+            $query->execute();
+            $result = $query->get_result();
+            $row = $result->fetch_assoc();
+            $group["number_of_members"] = $row["number_of_members"];
+        }
+
+        echo json_encode(array("status" => 200, "data" => $groups));
+    }
     else {
         $query = $connection->prepare("SELECT * FROM groups");
         $query->execute();

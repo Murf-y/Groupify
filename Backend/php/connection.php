@@ -63,4 +63,11 @@ $connection->query("CREATE TABLE IF NOT EXISTS notifications (
     FOREIGN KEY (receiver_id) REFERENCES users(id)
 )");
 
+$connection->query("CREATE TABLE IF NOT EXISTS recent_searches (
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    user_id INT(6) UNSIGNED NOT NULL,
+    search_term VARCHAR(30) NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(id)
+)");
+
 ?>

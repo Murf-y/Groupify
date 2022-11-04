@@ -2767,7 +2767,9 @@ id edittext_dropdown_noneditable
 id elastic
 id emailInput
 id empty_state_image
+id empty_state_image2
 id empty_state_text
+id empty_state_text2
 id end
 id endToStart
 id enterAlways

@@ -83,7 +83,9 @@ id createGroupError
 id editIcon
 id emailInput
 id empty_state_image
+id empty_state_image2
 id empty_state_text
+id empty_state_text2
 id errorMessage
 id explore
 id foreground
