@@ -23,7 +23,8 @@ import java.util.Map;
 public class UserApi {
     private final String login_path = "login.php";
     private final String signup_path = "signup.php";
-
+    private final String user_api_path = "user.php";
+    
     private final Context context;
 
     public UserApi(Context context){

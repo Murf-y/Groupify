@@ -19,7 +19,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class SearchApi {
-    private final String search_api_path = "recent_search.php";
+    private final String search_api_path = "search.php";
 
     private final Context context;
 
