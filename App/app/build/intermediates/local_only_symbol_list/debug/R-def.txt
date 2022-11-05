@@ -83,6 +83,8 @@ id circleOne4
 id circleOne5
 id createBtn
 id createGroupError
+id createPost
+id createPostError
 id editIcon
 id emailInput
 id empty_state_image
@@ -138,6 +140,9 @@ id onBoardinTwoText
 id passwordInput
 id pic
 id pickusername
+id postBtn
+id postContentInput
+id postTitleInput
 id postablesList
 id posts
 id profileBackArrow
@@ -150,7 +155,6 @@ id seperator
 id signup
 id signupInstead
 id skip
-id textView
 id top_bar
 id username
 id usernameError

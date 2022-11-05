@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
@@ -15,6 +16,7 @@ import com.google.gson.Gson;
 import com.murfy.groupify.R;
 import com.murfy.groupify.api.CrudCallback;
 import com.murfy.groupify.api.CrudError;
+import com.murfy.groupify.api.GroupMembersApi;
 import com.murfy.groupify.api.PostApi;
 import com.murfy.groupify.customElements.DrawableClickListener;
 import com.murfy.groupify.databinding.ActivityGroupBinding;
@@ -42,6 +44,30 @@ public class GroupActivity extends AppCompatActivity {
 
         group = (Group) getIntent().getSerializableExtra("group");
         currentUser = new Gson().fromJson(getSharedPreferences("groupify", MODE_PRIVATE).getString("current_user", "{}"), User.class);
+
+        new GroupMembersApi(getApplicationContext()).isMemberInGroup(currentUser.getId(), group.getId(), new CrudCallback<Boolean>() {
+            @Override
+            public void onSuccess(Boolean is_in_group) {
+                if(!is_in_group){
+                    binding.messageInput.setText("Join group to send messages");
+                    binding.messageInput.setClickable(false);
+                    binding.messageInput.setEnabled(false);
+                    binding.messageInput.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0);
+                }else{
+                    binding.messageInput.setText("Enter a message");
+                    binding.messageInput.setClickable(true);
+                    binding.messageInput.setEnabled(true);
+                    binding.messageInput.setCompoundDrawablesWithIntrinsicBounds(0,0,R.drawable.add_post_icon,0);
+                }
+            }
+
+            @Override
+            public void onError(CrudError error) {
+                binding.messageInput.setText("Join group to send messages");
+                binding.messageInput.setClickable(false);
+                binding.messageInput.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0);
+            }
+        });
 
         binding.backArrow2.setOnClickListener(view -> {
             finish();

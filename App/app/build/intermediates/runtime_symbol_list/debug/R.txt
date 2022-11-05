@@ -2723,6 +2723,8 @@ int id cos 0x7f090099
 int id counterclockwise 0x7f09009a
 int id createBtn 0x7f09009b
 int id createGroupError 0x7f09009c
+int id createPost 0x7f090240
+int id createPostError 0x7f090241
 int id currentState 0x7f09009d
 int id custom 0x7f09009e
 int id customPanel 0x7f09009f
@@ -2978,7 +2980,10 @@ int id pic 0x7f090198
 int id pickusername 0x7f090199
 int id pin 0x7f09019a
 int id position 0x7f09019b
+int id postBtn 0x7f090242
+int id postContentInput 0x7f090243
 int id postLayout 0x7f09019c
+int id postTitleInput 0x7f090244
 int id postablesList 0x7f09019d
 int id posts 0x7f09019e
 int id profileBackArrow 0x7f09019f
@@ -3089,7 +3094,6 @@ int id textSpacerNoButtons 0x7f090207
 int id textSpacerNoTitle 0x7f090208
 int id textStart 0x7f090209
 int id textTop 0x7f09020a
-int id textView 0x7f09020b
 int id text_input_end_icon 0x7f09020c
 int id text_input_error_icon 0x7f09020d
 int id text_input_start_icon 0x7f09020e

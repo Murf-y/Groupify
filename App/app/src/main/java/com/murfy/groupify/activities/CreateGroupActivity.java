@@ -4,16 +4,25 @@ import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
+import android.Manifest;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.database.Cursor;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.murfy.groupify.R;
@@ -23,7 +32,9 @@ import com.murfy.groupify.api.GroupApi;
 import com.murfy.groupify.databinding.ActivityCreateGroupBinding;
 import com.murfy.groupify.models.Group;
 import com.murfy.groupify.models.User;
+import com.murfy.groupify.utils.AnimationHelper;
 import com.murfy.groupify.utils.ImageEncoding;
+import com.murfy.groupify.utils.PermissionHelper;
 
 import java.io.IOException;
 
@@ -31,53 +42,24 @@ public class CreateGroupActivity extends AppCompatActivity {
 
     Bitmap imageBitMap;
     User currentUser;
-
+    ActivityCreateGroupBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ActivityCreateGroupBinding binding = ActivityCreateGroupBinding.inflate(getLayoutInflater());
+        binding = ActivityCreateGroupBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         currentUser = new Gson().fromJson(getSharedPreferences("groupify", MODE_PRIVATE).getString("current_user", "{}"), User.class);
-
-        ActivityResultLauncher<Intent> imagePickerActivityResult = registerForActivityResult(
-                new ActivityResultContracts.StartActivityForResult(), result -> {
-                    if (result != null) {
-                        Uri imageUri = result.getData() != null ? result.getData().getData() : null;
-                        try {
-                            imageBitMap = MediaStore.Images.Media.getBitmap(getApplicationContext().getContentResolver(), imageUri);
-                            binding.addImageButton.setVisibility(View.GONE);
-                            binding.addImageLabel.setVisibility(View.GONE);
-                            binding.imagePreview.setImageURI(imageUri);
-                            binding.imagePreview.setVisibility(View.VISIBLE);
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }
-        );
 
         binding.backArrow.setOnClickListener(view -> {
             finish();
         });
 
         binding.addImageButton.setOnClickListener(view -> {
-            Intent pickIntent = new Intent();
-            pickIntent.setType("image/*");
-            pickIntent.setAction(Intent.ACTION_GET_CONTENT);
-
-            Intent takePhotoIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-
-            String pickTitle = "Select or take a new Picture";
-            Intent chooserIntent = Intent.createChooser(pickIntent, pickTitle);
-            chooserIntent.putExtra
-                    (
-                            Intent.EXTRA_INITIAL_INTENTS,
-                            new Intent[] { takePhotoIntent }
-                    );
-
-            imagePickerActivityResult.launch(pickIntent);
+            if(PermissionHelper.checkAndRequestPermissions(this)){
+                chooseImage(this);
+            }
         });
 
         binding.cancelBtn.setOnClickListener(view -> {
@@ -86,6 +68,18 @@ public class CreateGroupActivity extends AppCompatActivity {
         binding.createBtn.setOnClickListener(view -> {
             String subject = binding.groupNameInput.getText().toString();
             String description = binding.groupDescriptionInput.getText().toString();
+
+            if(subject.length() < 5){
+                binding.createGroupError.setText("Group title should be at least 5 chars long");
+                binding.createGroupError.setVisibility(View.VISIBLE);
+                AnimationHelper.getInstance().animateError(binding.createGroupError);
+                return;
+            }else if(description.length() < 10){
+                binding.createGroupError.setText("Group description should be at least 10 chars long");
+                binding.createGroupError.setVisibility(View.VISIBLE);
+                AnimationHelper.getInstance().animateError(binding.createGroupError);
+                return;
+            }
             String group_photo =
                     ImageEncoding.convertToBase64(imageBitMap == null ?
                             ImageEncoding.getBitmapFromXml(getDrawable(R.drawable.group_default_image)):
@@ -105,5 +99,88 @@ public class CreateGroupActivity extends AppCompatActivity {
             });
 
         });
+    }
+    private void chooseImage(Context context){
+        final CharSequence[] optionsMenu = {"Take Photo", "Choose from Gallery", "Exit" }; // create a menuOption Array
+        // create a dialog for showing the optionsMenu
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        // set the items in builder
+        builder.setItems(optionsMenu, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                if(optionsMenu[i].equals("Take Photo")){
+                    // Open the camera and get the photo
+                    Intent takePicture = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+                    startActivityForResult(takePicture, 0);
+                }
+                else if(optionsMenu[i].equals("Choose from Gallery")){
+                    // choose from  external storage
+                    Intent pickPhoto = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                    startActivityForResult(pickPhoto , 1);
+                }
+                else if (optionsMenu[i].equals("Exit")) {
+                    dialogInterface.dismiss();
+                }
+            }
+        });
+        builder.show();
+    }
+    @Override
+    public void onRequestPermissionsResult(int requestCode,String[] permissions, int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        switch (requestCode) {
+            case 101:
+                if (ContextCompat.checkSelfPermission(this,
+                        Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+                    Toast.makeText(getApplicationContext(),
+                                    "FlagUp Requires Access to Camara.", Toast.LENGTH_SHORT)
+                            .show();
+                } else if (ContextCompat.checkSelfPermission(this,
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+                    Toast.makeText(getApplicationContext(),
+                            "FlagUp Requires Access to Your Storage.",
+                            Toast.LENGTH_SHORT).show();
+                } else {
+                    chooseImage(this);
+                }
+                break;
+        }
+    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode != RESULT_CANCELED) {
+            switch (requestCode) {
+                case 0:
+                    if (resultCode == RESULT_OK && data != null) {
+                        imageBitMap = (Bitmap) data.getExtras().get("data");
+                        binding.addImageButton.setVisibility(View.GONE);
+                        binding.addImageLabel.setVisibility(View.GONE);
+                        binding.imagePreview.setImageBitmap(imageBitMap);
+                        binding.imagePreview.setVisibility(View.VISIBLE);
+                    }
+                    break;
+                case 1:
+                    if (resultCode == RESULT_OK && data != null) {
+                        Uri selectedImage = data.getData();
+                        String[] filePathColumn = {MediaStore.Images.Media.DATA};
+                        if (selectedImage != null) {
+                            Cursor cursor = getContentResolver().query(selectedImage, filePathColumn, null, null, null);
+                            if (cursor != null) {
+                                cursor.moveToFirst();
+                                int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
+                                String picturePath = cursor.getString(columnIndex);
+                                imageBitMap = BitmapFactory.decodeFile(picturePath);
+                                binding.addImageButton.setVisibility(View.GONE);
+                                binding.addImageLabel.setVisibility(View.GONE);
+                                binding.imagePreview.setImageBitmap(imageBitMap);
+                                binding.imagePreview.setVisibility(View.VISIBLE);
+                                cursor.close();
+                            }
+                        }
+                    }
+                    break;
+            }
+        }
     }
 }

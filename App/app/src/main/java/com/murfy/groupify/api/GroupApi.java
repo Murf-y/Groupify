@@ -119,6 +119,39 @@ public class GroupApi {
         Crud.getInstance(context).addRequestToQueue(stringRequest);
     }
 
+    public void getGroupsCreatedByMe(String ownerId, CrudCallback<ArrayList<Group>> callback) {
+        StringRequest stringRequest = new StringRequest(Request.Method.GET,
+                Crud.base_url + group_api_path + "?owner_id=" + ownerId,
+                response -> {
+                    try {
+                        JSONObject res = new JSONObject(response);
+                        int status = res.getInt("status");
+                        if(status == 200){
+                            ArrayList<Group> groups = new ArrayList<>();
+                            JSONArray groups_array = res.getJSONArray("data");
+                            for(int i = 0; i < groups_array.length(); i++){
+                                JSONObject group = groups_array.getJSONObject(i);
+                                groups.add(getGroupFromJson(group));
+                            }
+                            callback.onSuccess(groups);
+                        }else{
+                            CrudError error = new CrudError(status, res.getString("message"));
+                            callback.onError(error);
+                        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                        CrudError error = new CrudError(400, "Unknown Error occurred, try again later");
+                        callback.onError(error);
+                    }
+
+                }, error -> {
+            Log.i("ERROR", error.toString());
+            CrudError err = new CrudError(500, error.getMessage());
+            callback.onError(err);
+        });
+
+        Crud.getInstance(context).addRequestToQueue(stringRequest);
+    }
     public void createGroup(String owner_id, String subject, String description, String group_photo, CrudCallback<Group> callback) {
         StringRequest stringRequest = new StringRequest(Request.Method.POST,
                 Crud.base_url + group_api_path,

@@ -31,7 +31,7 @@
             app:srcCompat="@drawable/arrow_left" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/createPost"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -100,6 +100,7 @@
         android:layout_marginRight="30dp"
         android:background="@drawable/input"
         android:ems="10"
+        android:fontFamily="@font/worksans_regular"
         android:hint="Group Name"
         android:inputType="textPersonName"
         android:paddingLeft="10dp"
@@ -120,6 +121,7 @@
         android:layout_marginRight="30dp"
         android:background="@drawable/input"
         android:ems="10"
+        android:fontFamily="@font/worksans_regular"
         android:gravity="start|top"
         android:hint="Group Description"
         android:inputType="textMultiLine"

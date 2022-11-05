@@ -1,7 +1,7 @@
 <?php
 
 include("connection.php");
-include("functions.php");
+include("helpers.php");
 
 $username = $_POST["username"];
 $pass = $_POST["password"];

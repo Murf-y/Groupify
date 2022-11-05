@@ -33,6 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
         android:layout_weight="0.3"
+        android:fontFamily="@font/worksans_medium"
         android:paddingLeft="20dp"
         android:text="Music club fans"
         android:textSize="20sp" />
@@ -52,6 +53,7 @@
             android:layout_weight="1"
             android:drawableLeft="@drawable/group_card_members_icon"
             android:drawablePadding="10dp"
+            android:fontFamily="@font/worksans_regular"
             android:text="151" />
     </LinearLayout>
 
