@@ -55,9 +55,10 @@
             android:id="@+id/groupPhoto"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:background="@color/grey_200"
             app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
             app:srcCompat="@drawable/group_default_image"
-            app:strokeColor="?attr/colorOnPrimary"
+            app:strokeColor="@color/grey_200"
             app:strokeWidth="1dp" />
 
         <LinearLayout

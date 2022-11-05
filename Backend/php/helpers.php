@@ -45,10 +45,26 @@ function passmatch($connection, $pass, $username){
 
 function getuserinfo($connection, $username){
     
+
     $query = $connection->prepare("SELECT * FROM users WHERE username = ?");
     $query->bind_param("s", $username);
     $query->execute();
     $results = $query->get_result();
 
-    return $results->fetch_assoc();  
+    // add the number of groups they are in, and the number of posts they have made
+    $user = $results->fetch_assoc();
+
+    $query = $connection->prepare("SELECT COUNT(*) FROM group_members WHERE user_id = ?");
+    $query->bind_param("i", $user["id"]);
+    $query->execute();
+    $result = $query->get_result()->fetch_assoc();
+    $user["num_groups"] = $result["COUNT(*)"];
+
+    $query = $connection->prepare("SELECT COUNT(*) FROM postables WHERE user_id = ?");
+    $query->bind_param("i", $user["id"]);
+    $query->execute();
+    $result = $query->get_result()->fetch_assoc();
+    $user["num_posts"] = $result["COUNT(*)"];
+
+    return $user;
 }

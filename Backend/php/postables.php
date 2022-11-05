@@ -19,6 +19,18 @@ if($_SERVER['REQUEST_METHOD'] === 'GET'){
         $query->execute();
         $result = $query->get_result();
         $user = $result->fetch_assoc();
+
+        $query = $connection->prepare("SELECT COUNT(*) FROM group_members WHERE user_id = ?");
+        $query->bind_param("i", $user["id"]);
+        $query->execute();
+        $result = $query->get_result()->fetch_assoc();
+        $user["num_groups"] = $result["COUNT(*)"];
+    
+        $query = $connection->prepare("SELECT COUNT(*) FROM postables WHERE user_id = ?");
+        $query->bind_param("i", $user["id"]);
+        $query->execute();
+        $result = $query->get_result()->fetch_assoc();
+        $user["num_posts"] = $result["COUNT(*)"];
         $posts[$key]['sender'] = $user;
     }
 

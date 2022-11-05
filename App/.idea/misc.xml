@@ -30,8 +30,8 @@
         <entry key="..\:/xampp/htdocs/Groupify/App/app/src/main/res/font/worksans_family.xml" value="0.12368421052631579" />
         <entry key="..\:/xampp/htdocs/Groupify/App/app/src/main/res/layout/activity_create_group.xml" value="0.132" />
         <entry key="..\:/xampp/htdocs/Groupify/App/app/src/main/res/layout/activity_create_post.xml" value="0.14814814814814814" />
-        <entry key="..\:/xampp/htdocs/Groupify/App/app/src/main/res/layout/activity_group.xml" value="0.1" />
-        <entry key="..\:/xampp/htdocs/Groupify/App/app/src/main/res/layout/activity_group_description.xml" value="0.132" />
+        <entry key="..\:/xampp/htdocs/Groupify/App/app/src/main/res/layout/activity_group.xml" value="0.2" />
+        <entry key="..\:/xampp/htdocs/Groupify/App/app/src/main/res/layout/activity_group_description.xml" value="0.1" />
         <entry key="..\:/xampp/htdocs/Groupify/App/app/src/main/res/layout/activity_home.xml" value="0.2" />
         <entry key="..\:/xampp/htdocs/Groupify/App/app/src/main/res/layout/activity_login.xml" value="0.268" />
         <entry key="..\:/xampp/htdocs/Groupify/App/app/src/main/res/layout/activity_on_board_one.xml" value="0.132" />
@@ -43,6 +43,7 @@
         <entry key="..\:/xampp/htdocs/Groupify/App/app/src/main/res/layout/activity_signup.xml" value="0.36" />
         <entry key="..\:/xampp/htdocs/Groupify/App/app/src/main/res/layout/activity_splash_screen.xml" value="0.132" />
         <entry key="..\:/xampp/htdocs/Groupify/App/app/src/main/res/layout/group_list_item.xml" value="0.132" />
+        <entry key="..\:/xampp/htdocs/Groupify/App/app/src/main/res/layout/member_list_item.xml" value="0.132" />
         <entry key="..\:/xampp/htdocs/Groupify/App/app/src/main/res/layout/recent_search_item.xml" value="0.1" />
       </map>
     </option>

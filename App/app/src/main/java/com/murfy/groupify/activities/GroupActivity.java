@@ -54,7 +54,7 @@ public class GroupActivity extends AppCompatActivity {
                     binding.messageInput.setEnabled(false);
                     binding.messageInput.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0);
                 }else{
-                    binding.messageInput.setText("Enter a message");
+                    binding.messageInput.setText("");
                     binding.messageInput.setClickable(true);
                     binding.messageInput.setEnabled(true);
                     binding.messageInput.setCompoundDrawablesWithIntrinsicBounds(0,0,R.drawable.add_post_icon,0);

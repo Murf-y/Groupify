@@ -163,12 +163,16 @@ public class PostApi {
         String stored_email = res.getString("email");
         String bio = res.getString("bio");
         String profile_photo = res.getString("profile_photo");
+        String numberOfGroupsJoined = res.getString("num_groups");
+        String numberOfPosts = res.getString("num_posts");
         return new User(
                 String.valueOf(id),
                 stored_username,
                 stored_email,
                 bio,
-                profile_photo
+                profile_photo,
+                numberOfGroupsJoined,
+                numberOfPosts
         );
     }
 }

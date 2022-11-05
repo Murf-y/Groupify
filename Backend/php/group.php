@@ -40,20 +40,22 @@ else if ($_SERVER['REQUEST_METHOD'] === 'GET') {
             $groups[] = $row;
         }
         
-        foreach ($groups as &$group) {
-            $groupid = $group["id"];
+
+        for ($i = 0; $i < count($groups); $i++) {
+            $groupid = $groups[$i]["id"];
             $query = $connection->prepare("SELECT COUNT(*) AS number_of_members FROM group_members WHERE group_id = ?");
             $query->bind_param("i", $groupid);
             $query->execute();
             $result = $query->get_result();
             $row = $result->fetch_assoc();
-            $group["number_of_members"] = $row["number_of_members"];
+            $groups[$i]["number_of_members"] = $row["number_of_members"];
         }
+
         echo json_encode(array("status" => 200, "data" => $groups));
     }
     else if(isset($_GET["user_id"])){
         $user_id = $_GET["user_id"];
-        $query = $connection->prepare("SELECT * FROM groups  JOIN group_members ON groups.id = group_members.group_id AND group_members.user_id = ?");
+        $query = $connection->prepare("SELECT groups.* FROM group_members JOIN groups ON groups.id = group_members.group_id AND group_members.user_id = ?");
         $query->bind_param("i", $user_id);
         $query->execute();
         $result = $query->get_result();
@@ -62,16 +64,17 @@ else if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         while ($row = $result->fetch_assoc()) {
             $groups[] = $row;
         }
-        
-        foreach ($groups as &$group) {
-            $groupid = $group["id"];
+
+        for ($i = 0; $i < count($groups); $i++) {
+            $groupid = $groups[0]["id"];
             $query = $connection->prepare("SELECT COUNT(*) AS number_of_members FROM group_members WHERE group_id = ?");
             $query->bind_param("i", $groupid);
             $query->execute();
             $result = $query->get_result();
             $row = $result->fetch_assoc();
-            $group["number_of_members"] = $row["number_of_members"];
+            $groups[$i]["number_of_members"] = $row["number_of_members"];
         }
+
         echo json_encode(array("status" => 200, "data" => $groups));
     }
     else if(isset($_GET["search_term"])){
@@ -88,16 +91,16 @@ else if ($_SERVER['REQUEST_METHOD'] === 'GET') {
             $groups[] = $row;
         }
 
-        foreach ($groups as &$group) {
-            $groupid = $group["id"];
+
+        for ($i = 0; $i < count($groups); $i++) {
+            $groupid = $groups[$i]["id"];
             $query = $connection->prepare("SELECT COUNT(*) AS number_of_members FROM group_members WHERE group_id = ?");
             $query->bind_param("i", $groupid);
             $query->execute();
             $result = $query->get_result();
             $row = $result->fetch_assoc();
-            $group["number_of_members"] = $row["number_of_members"];
+            $groups[$i]["number_of_members"] = $row["number_of_members"];
         }
-
         echo json_encode(array("status" => 200, "data" => $groups));
     }
     else {
