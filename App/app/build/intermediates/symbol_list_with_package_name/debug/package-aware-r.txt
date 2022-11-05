@@ -2449,6 +2449,7 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable add_image_input_box
 drawable add_image_square
+drawable add_post_icon
 drawable arrow_left
 drawable avd_hide_password
 drawable avd_show_password
@@ -2462,6 +2463,7 @@ drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable button
+drawable button_red
 drawable circle
 drawable design_fab_background
 drawable design_ic_visibility
@@ -2469,6 +2471,7 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable disabled_button
+drawable divider_transparent
 drawable group_card_members_icon
 drawable group_default_image
 drawable group_item_card
@@ -2545,9 +2548,11 @@ drawable on_board_two_background
 drawable on_board_two_dots
 drawable on_board_two_foreground
 drawable profile_avatar_default
+drawable profile_default
 drawable profile_edit_icon
 drawable profile_stats_box
 drawable search_bar_search_icon
+drawable send_message_icon
 drawable signup_background
 drawable signup_eye
 drawable signup_eye_closed
@@ -2558,7 +2563,6 @@ drawable splash_screen_circle4
 drawable splash_screen_circle5
 drawable test_custom_background
 drawable test_level_drawable
-drawable testlol
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable top_search_bar
@@ -2661,6 +2665,8 @@ id autoCompleteToEnd
 id autoCompleteToStart
 id avatar
 id backArrow
+id backArrow2
+id backArrow3
 id background
 id barrier
 id baseline
@@ -2668,6 +2674,7 @@ id beginOnFirstDraw
 id beginning
 id bestChoice
 id bio
+id bioInput
 id blocking
 id bottom
 id bounce
@@ -2688,6 +2695,7 @@ id center_vertical
 id chain
 id chain2
 id chains
+id changeProfileImageBtn
 id checkbox
 id checked
 id chip
@@ -2719,8 +2727,11 @@ id continuousVelocity
 id coordinator
 id cos
 id counterclockwise
+id createAtText
 id createBtn
 id createGroupError
+id createPost
+id createPostError
 id currentState
 id custom
 id customPanel
@@ -2732,6 +2743,7 @@ id decor_content_parent
 id default_activity_button
 id deltaRelative
 id dependency_ordering
+id description
 id design_bottom_sheet
 id design_menu_item_action_area
 id design_menu_item_action_area_stub
@@ -2784,6 +2796,7 @@ id fill
 id fill_horizontal
 id fill_vertical
 id filled
+id filters
 id fitCenter
 id fitEnd
 id fitStart
@@ -2795,7 +2808,6 @@ id floating
 id foreground
 id forever
 id fragment_container_view_tag
-id frame
 id frame2
 id frost
 id fullscreen_header
@@ -2807,9 +2819,13 @@ id graph
 id graph_wrap
 id groupDescriptionInput
 id groupImageView
+id groupName
 id groupNameInput
 id groupNumberOfMembers
+id groupPhoto
+id groupPhoto2
 id groupSubject
+id groupSubjectText
 id group_divider
 id grouping
 id groups
@@ -2836,6 +2852,7 @@ id invisible
 id inward
 id italic
 id item_touch_helper_previous_elevation
+id joinOrLeaveButton
 id jumpToEnd
 id jumpToStart
 id labeled
@@ -2847,15 +2864,18 @@ id line1
 id line3
 id linear
 id linearLayout
+id linearLayout10
+id linearLayout11
 id linearLayout2
 id linearLayout3
-id linearLayout4
 id linearLayout5
 id linearLayout6
 id linearLayout7
 id linearLayout8
+id linearLayout9
 id listMode
 id list_item
+id login
 id loginBackground
 id loginInstead
 id logo
@@ -2883,8 +2903,14 @@ id material_timepicker_ok_button
 id material_timepicker_view
 id material_value_index
 id matrix
+id memberBio
+id memberCount
+id memberName
+id memberPhoto
+id membersCount
+id membersList
 id message
-id messages
+id messageInput
 id middle
 id mini
 id month_grid
@@ -2919,6 +2945,7 @@ id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
 id mygroups
+id nameAndCount
 id navigation_bar_item_active_indicator_view
 id navigation_bar_item_icon_container
 id navigation_bar_item_icon_view
@@ -2939,7 +2966,6 @@ id notification_main_column
 id notification_main_column_container
 id notifications
 id numberOfGroups
-id numberOfMessages
 id numberOfPosts
 id off
 id on
@@ -2970,10 +2996,15 @@ id pic
 id pickusername
 id pin
 id position
+id postBtn
+id postContentInput
 id postLayout
+id postTitleInput
+id postablesList
 id posts
 id profileBackArrow
 id profileNotifications
+id profilePhotoEdit
 id progress_circular
 id progress_horizontal
 id radio
@@ -3080,7 +3111,6 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
-id textView
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3111,6 +3141,8 @@ id unchecked
 id uniform
 id unlabeled
 id up
+id updateBtn
+id updateProfileError
 id useLogo
 id username
 id usernameError
@@ -3226,6 +3258,10 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_create_group
+layout activity_create_post
+layout activity_edit_profile
+layout activity_group
+layout activity_group_description
 layout activity_home
 layout activity_login
 layout activity_on_board_one
@@ -3270,6 +3306,7 @@ layout material_time_input
 layout material_timepicker
 layout material_timepicker_dialog
 layout material_timepicker_textinput_display
+layout member_list_item
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions
 layout mtrl_alert_dialog_title
@@ -4506,6 +4543,7 @@ style Widget_MaterialComponents_Toolbar_PrimarySurface
 style Widget_MaterialComponents_Toolbar_Surface
 style Widget_MaterialComponents_Tooltip
 style Widget_Support_CoordinatorLayout
+style roundedImageViewRounded
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle
 styleable ActionBarLayout android_layout_gravity
 styleable ActionMenuItemView android_minWidth

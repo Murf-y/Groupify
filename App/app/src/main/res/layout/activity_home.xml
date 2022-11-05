@@ -36,16 +36,20 @@
             android:paddingLeft="70dp"
             app:srcCompat="@drawable/home_notifications_bell" />
 
-        <ImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/avatar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="30dp"
+            android:layout_height="52dp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/profile_avatar_default" />
+            android:background="@color/grey_100"
+            app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
+            app:srcCompat="@drawable/profile_default"
+            app:strokeColor="?attr/colorOnSecondary"
+            app:strokeWidth="0.6dp" />
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout4"
+        android:id="@+id/filters"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
@@ -94,7 +98,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+        app:layout_constraintTop_toBottomOf="@+id/filters"
         app:layout_constraintVertical_bias="0.25"
         app:srcCompat="@drawable/home_empty_state" />
 
@@ -104,10 +108,12 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:fontFamily="@font/worksans_regular"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
         android:text="Looks like you did not join any groups yet.\n Head to explore to find new groups or create your own!"
         android:textAlignment="center"
         android:textColor="?attr/colorSecondary"
-        android:textSize="18sp"
+        android:textSize="14sp"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -190,7 +196,7 @@
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+        app:layout_constraintTop_toBottomOf="@+id/filters"
         android:divider="@android:color/transparent"
         android:dividerHeight="20.0sp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

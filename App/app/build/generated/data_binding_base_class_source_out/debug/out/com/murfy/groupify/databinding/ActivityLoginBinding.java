@@ -37,13 +37,13 @@ public final class ActivityLoginBinding implements ViewBinding {
   public final LinearLayout linearLayout2;
 
   @NonNull
+  public final Button login;
+
+  @NonNull
   public final ImageView loginBackground;
 
   @NonNull
   public final CustomEditText passwordInput;
-
-  @NonNull
-  public final Button signup;
 
   @NonNull
   public final TextView signupInstead;
@@ -53,17 +53,17 @@ public final class ActivityLoginBinding implements ViewBinding {
 
   private ActivityLoginBinding(@NonNull ConstraintLayout rootView, @NonNull TextView accountinfo,
       @NonNull TextView alreadyHaveAccount, @NonNull TextView errorMessage,
-      @NonNull LinearLayout linearLayout2, @NonNull ImageView loginBackground,
-      @NonNull CustomEditText passwordInput, @NonNull Button signup,
+      @NonNull LinearLayout linearLayout2, @NonNull Button login,
+      @NonNull ImageView loginBackground, @NonNull CustomEditText passwordInput,
       @NonNull TextView signupInstead, @NonNull EditText usernameInput) {
     this.rootView = rootView;
     this.accountinfo = accountinfo;
     this.alreadyHaveAccount = alreadyHaveAccount;
     this.errorMessage = errorMessage;
     this.linearLayout2 = linearLayout2;
+    this.login = login;
     this.loginBackground = loginBackground;
     this.passwordInput = passwordInput;
-    this.signup = signup;
     this.signupInstead = signupInstead;
     this.usernameInput = usernameInput;
   }
@@ -119,6 +119,12 @@ public final class ActivityLoginBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.login;
+      Button login = ViewBindings.findChildViewById(rootView, id);
+      if (login == null) {
+        break missingId;
+      }
+
       id = R.id.loginBackground;
       ImageView loginBackground = ViewBindings.findChildViewById(rootView, id);
       if (loginBackground == null) {
@@ -128,12 +134,6 @@ public final class ActivityLoginBinding implements ViewBinding {
       id = R.id.passwordInput;
       CustomEditText passwordInput = ViewBindings.findChildViewById(rootView, id);
       if (passwordInput == null) {
-        break missingId;
-      }
-
-      id = R.id.signup;
-      Button signup = ViewBindings.findChildViewById(rootView, id);
-      if (signup == null) {
         break missingId;
       }
 
@@ -150,7 +150,7 @@ public final class ActivityLoginBinding implements ViewBinding {
       }
 
       return new ActivityLoginBinding((ConstraintLayout) rootView, accountinfo, alreadyHaveAccount,
-          errorMessage, linearLayout2, loginBackground, passwordInput, signup, signupInstead,
+          errorMessage, linearLayout2, login, loginBackground, passwordInput, signupInstead,
           usernameInput);
     }
     String missingId = rootView.getResources().getResourceName(id);

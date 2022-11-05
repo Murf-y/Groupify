@@ -4,17 +4,32 @@
     package="com.murfy.groupify">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
-        android:usesCleartextTraffic="true"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Groupify"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
+        <activity
+            android:name=".activities.EditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.CreatePostActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.GroupDescriptionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.GroupActivity"
+            android:exported="false" />
         <activity
             android:name=".activities.ProfileActivity"
             android:exported="false" />

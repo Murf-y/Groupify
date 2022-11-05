@@ -13,125 +13,155 @@
 11    <uses-permission android:name="android.permission.INTERNET" />
 11-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:6:5-67
 11-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:6:22-64
-12
-13    <application
-13-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:7:5-54:19
-14        android:allowBackup="true"
-14-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:8:9-35
-15        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-15-->[androidx.core:core:1.8.0] C:\Users\USER\.gradle\caches\transforms-3\0638d9dacb5fd10604e28ec2b4d3c80b\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
-16        android:dataExtractionRules="@xml/data_extraction_rules"
-16-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:9:9-65
-17        android:debuggable="true"
-18        android:extractNativeLibs="false"
-19        android:fullBackupContent="@xml/backup_rules"
-19-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:11:9-54
-20        android:icon="@mipmap/ic_launcher"
-20-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:12:9-43
-21        android:label="@string/app_name"
-21-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:13:9-41
-22        android:roundIcon="@mipmap/ic_launcher_round"
-22-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:14:9-54
-23        android:supportsRtl="true"
-23-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:15:9-35
-24        android:testOnly="true"
-25        android:theme="@style/Theme.Groupify"
-25-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:16:9-46
-26        android:usesCleartextTraffic="true" >
-26-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:10:9-44
-27        <activity
-27-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:18:9-20:40
-28            android:name="com.murfy.groupify.activities.ProfileActivity"
-28-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:19:13-55
-29            android:exported="false" />
-29-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:20:13-37
-30        <activity
-30-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:21:9-23:40
-31            android:name="com.murfy.groupify.activities.CreateGroupActivity"
-31-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:22:13-59
-32            android:exported="false" />
-32-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:23:13-37
-33        <activity
-33-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:24:9-26:40
-34            android:name="com.murfy.groupify.activities.SearchActivity"
-34-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:25:13-54
-35            android:exported="false" />
-35-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:26:13-37
-36        <activity
-36-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:27:9-29:40
-37            android:name="com.murfy.groupify.activities.HomeActivity"
-37-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:28:13-52
-38            android:exported="false" />
-38-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:29:13-37
-39        <activity
-39-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:30:9-32:40
-40            android:name="com.murfy.groupify.activities.Login"
-40-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:31:13-45
-41            android:exported="false" />
-41-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:32:13-37
-42        <activity
-42-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:33:9-35:40
-43            android:name="com.murfy.groupify.activities.Signup"
-43-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:34:13-46
-44            android:exported="false" />
-44-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:35:13-37
-45        <activity
-45-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:36:9-38:40
-46            android:name="com.murfy.groupify.activities.OnBoardThree"
-46-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:37:13-52
-47            android:exported="false" />
-47-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:38:13-37
-48        <activity
-48-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:39:9-41:40
-49            android:name="com.murfy.groupify.activities.OnBoardTwo"
-49-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:40:13-50
-50            android:exported="false" />
-50-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:41:13-37
-51        <activity
-51-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:42:9-44:40
-52            android:name="com.murfy.groupify.activities.OnBoardOne"
-52-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:43:13-50
-53            android:exported="false" />
-53-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:44:13-37
-54        <activity
-54-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:45:9-53:20
-55            android:name="com.murfy.groupify.activities.SplashScreen"
-55-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:46:13-52
-56            android:exported="true" >
-56-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:47:13-36
-57            <intent-filter>
-57-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:48:13-52:29
-58                <action android:name="android.intent.action.MAIN" />
-58-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:49:17-69
-58-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:49:25-66
-59
-60                <category android:name="android.intent.category.LAUNCHER" />
-60-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:51:17-77
-60-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:51:27-74
-61            </intent-filter>
-62        </activity>
-63
-64        <provider
-64-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\transforms-3\9f99c19470d8bf18ee15270d078c3173\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-65            android:name="androidx.startup.InitializationProvider"
-65-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\transforms-3\9f99c19470d8bf18ee15270d078c3173\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
-66            android:authorities="com.murfy.groupify.androidx-startup"
-66-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\transforms-3\9f99c19470d8bf18ee15270d078c3173\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
-67            android:exported="false" >
-67-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\transforms-3\9f99c19470d8bf18ee15270d078c3173\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
-68            <meta-data
-68-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\transforms-3\9f99c19470d8bf18ee15270d078c3173\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-69                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-69-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\transforms-3\9f99c19470d8bf18ee15270d078c3173\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
-70                android:value="androidx.startup" />
-70-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\transforms-3\9f99c19470d8bf18ee15270d078c3173\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
-71            <meta-data
-71-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\USER\.gradle\caches\transforms-3\a68586d9ac6fc4872d4884a947d1c1d5\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
-72                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-72-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\USER\.gradle\caches\transforms-3\a68586d9ac6fc4872d4884a947d1c1d5\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
-73                android:value="androidx.startup" />
-73-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\USER\.gradle\caches\transforms-3\a68586d9ac6fc4872d4884a947d1c1d5\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
-74        </provider>
-75    </application>
-76
-77</manifest>
+12    <uses-permission android:name="android.permission.CAMERA" />
+12-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:7:5-65
+12-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:7:22-62
+13    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+13-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:8:5-81
+13-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:8:22-78
+14
+15    <application
+15-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:10:5-69:19
+16        android:allowBackup="true"
+16-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:11:9-35
+17        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+17-->[androidx.core:core:1.8.0] C:\Users\USER\.gradle\caches\transforms-3\0638d9dacb5fd10604e28ec2b4d3c80b\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
+18        android:dataExtractionRules="@xml/data_extraction_rules"
+18-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:12:9-65
+19        android:debuggable="true"
+20        android:extractNativeLibs="false"
+21        android:fullBackupContent="@xml/backup_rules"
+21-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:13:9-54
+22        android:icon="@mipmap/ic_launcher"
+22-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:14:9-43
+23        android:label="@string/app_name"
+23-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:15:9-41
+24        android:roundIcon="@mipmap/ic_launcher_round"
+24-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:16:9-54
+25        android:supportsRtl="true"
+25-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:17:9-35
+26        android:testOnly="true"
+27        android:theme="@style/Theme.Groupify"
+27-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:18:9-46
+28        android:usesCleartextTraffic="true" >
+28-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:19:9-44
+29        <activity
+29-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:21:9-23:40
+30            android:name="com.murfy.groupify.activities.EditProfileActivity"
+30-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:22:13-59
+31            android:exported="false" />
+31-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:23:13-37
+32        <activity
+32-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:24:9-26:40
+33            android:name="com.murfy.groupify.activities.CreatePostActivity"
+33-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:25:13-58
+34            android:exported="false" />
+34-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:26:13-37
+35        <activity
+35-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:27:9-29:40
+36            android:name="com.murfy.groupify.activities.GroupDescriptionActivity"
+36-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:28:13-64
+37            android:exported="false" />
+37-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:29:13-37
+38        <activity
+38-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:30:9-32:40
+39            android:name="com.murfy.groupify.activities.GroupActivity"
+39-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:31:13-53
+40            android:exported="false" />
+40-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:32:13-37
+41        <activity
+41-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:33:9-35:40
+42            android:name="com.murfy.groupify.activities.ProfileActivity"
+42-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:34:13-55
+43            android:exported="false" />
+43-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:35:13-37
+44        <activity
+44-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:36:9-38:40
+45            android:name="com.murfy.groupify.activities.CreateGroupActivity"
+45-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:37:13-59
+46            android:exported="false" />
+46-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:38:13-37
+47        <activity
+47-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:39:9-41:40
+48            android:name="com.murfy.groupify.activities.SearchActivity"
+48-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:40:13-54
+49            android:exported="false" />
+49-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:41:13-37
+50        <activity
+50-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:42:9-44:40
+51            android:name="com.murfy.groupify.activities.HomeActivity"
+51-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:43:13-52
+52            android:exported="false" />
+52-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:44:13-37
+53        <activity
+53-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:45:9-47:40
+54            android:name="com.murfy.groupify.activities.Login"
+54-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:46:13-45
+55            android:exported="false" />
+55-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:47:13-37
+56        <activity
+56-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:48:9-50:40
+57            android:name="com.murfy.groupify.activities.Signup"
+57-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:49:13-46
+58            android:exported="false" />
+58-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:50:13-37
+59        <activity
+59-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:51:9-53:40
+60            android:name="com.murfy.groupify.activities.OnBoardThree"
+60-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:52:13-52
+61            android:exported="false" />
+61-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:53:13-37
+62        <activity
+62-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:54:9-56:40
+63            android:name="com.murfy.groupify.activities.OnBoardTwo"
+63-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:55:13-50
+64            android:exported="false" />
+64-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:56:13-37
+65        <activity
+65-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:57:9-59:40
+66            android:name="com.murfy.groupify.activities.OnBoardOne"
+66-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:58:13-50
+67            android:exported="false" />
+67-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:59:13-37
+68        <activity
+68-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:60:9-68:20
+69            android:name="com.murfy.groupify.activities.SplashScreen"
+69-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:61:13-52
+70            android:exported="true" >
+70-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:62:13-36
+71            <intent-filter>
+71-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:63:13-67:29
+72                <action android:name="android.intent.action.MAIN" />
+72-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:64:17-69
+72-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:64:25-66
+73
+74                <category android:name="android.intent.category.LAUNCHER" />
+74-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:66:17-77
+74-->C:\xampp\htdocs\Groupify\App\app\src\main\AndroidManifest.xml:66:27-74
+75            </intent-filter>
+76        </activity>
+77
+78        <provider
+78-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\transforms-3\9f99c19470d8bf18ee15270d078c3173\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+79            android:name="androidx.startup.InitializationProvider"
+79-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\transforms-3\9f99c19470d8bf18ee15270d078c3173\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+80            android:authorities="com.murfy.groupify.androidx-startup"
+80-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\transforms-3\9f99c19470d8bf18ee15270d078c3173\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+81            android:exported="false" >
+81-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\transforms-3\9f99c19470d8bf18ee15270d078c3173\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+82            <meta-data
+82-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\transforms-3\9f99c19470d8bf18ee15270d078c3173\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+83                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+83-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\transforms-3\9f99c19470d8bf18ee15270d078c3173\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+84                android:value="androidx.startup" />
+84-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\transforms-3\9f99c19470d8bf18ee15270d078c3173\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+85            <meta-data
+85-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\USER\.gradle\caches\transforms-3\a68586d9ac6fc4872d4884a947d1c1d5\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+86                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+86-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\USER\.gradle\caches\transforms-3\a68586d9ac6fc4872d4884a947d1c1d5\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+87                android:value="androidx.startup" />
+87-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\USER\.gradle\caches\transforms-3\a68586d9ac6fc4872d4884a947d1c1d5\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+88        </provider>
+89    </application>
+90
+91</manifest>

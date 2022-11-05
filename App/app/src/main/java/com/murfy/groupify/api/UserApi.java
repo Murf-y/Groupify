@@ -1,6 +1,7 @@
 package com.murfy.groupify.api;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.Log;
 
@@ -37,12 +38,16 @@ public class UserApi {
         String stored_email = res.getString("email");
         String bio = res.getString("bio");
         String profile_photo = res.getString("profile_photo");
+        String numberOfGroupsJoined = res.getString("num_groups");
+        String numberOfPosts = res.getString("num_posts");
         return new User(
                 String.valueOf(id),
                 stored_username,
                 stored_email,
                 bio,
-                profile_photo
+                profile_photo,
+                numberOfGroupsJoined,
+                numberOfPosts
         );
     }
     public void signUp(String username, String email, String password, final CrudCallback<User> callback){
@@ -74,10 +79,11 @@ public class UserApi {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String,String> params = new HashMap<String, String>();
+                Bitmap default_photo = ImageEncoding.getBitmapFromXml(context.getDrawable(R.drawable.profile_default));
                 params.put("username", username);
                 params.put("email", email);
                 params.put("password", password);
-                params.put("profile_photo", ImageEncoding.convertToBase64(BitmapFactory.decodeResource(context.getResources(), R.drawable.profile_avatar_default)));
+                params.put("profile_photo", ImageEncoding.convertToBase64(default_photo));
                 return params;
             }
         };
@@ -121,4 +127,44 @@ public class UserApi {
         };
         Crud.getInstance(context).addRequestToQueue(stringRequest);
     }
+
+    public void updateUser(String id, String username, String bio, String profile_photo , final CrudCallback<User> callback){
+        StringRequest stringRequest = new StringRequest(Request.Method.POST,
+                Crud.base_url + user_api_path,
+                response -> {
+                    try {
+                        JSONObject res = new JSONObject(response);
+                        int status = res.getInt("status");
+                        if(status == 200){
+                            User user = getUserFromJson(res.getJSONObject("data"));
+                            callback.onSuccess(user);
+                        }else{
+                            CrudError error = new CrudError(status, res.getString("message"));
+                            callback.onError(error);
+                        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                        CrudError error = new CrudError(400, "Unknown Error occurred, try again later");
+                        callback.onError(error);
+                    }
+
+                }, error -> {
+            Log.i("ERROR", error.toString());
+            CrudError err = new CrudError(500, error.getMessage());
+            callback.onError(err);
+        }){
+
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String,String> params = new HashMap<String, String>();
+                params.put("user_id", id);
+                params.put("username", username);
+                params.put("bio", bio);
+                params.put("profile_photo", profile_photo);
+                return params;
+            }
+        };
+        Crud.getInstance(context).addRequestToQueue(stringRequest);
+    }
+
 }

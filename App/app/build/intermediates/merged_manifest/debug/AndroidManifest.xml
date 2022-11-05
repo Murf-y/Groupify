@@ -9,6 +9,8 @@
         android:targetSdkVersion="32" />
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -24,6 +26,18 @@
         android:testOnly="true"
         android:theme="@style/Theme.Groupify"
         android:usesCleartextTraffic="true" >
+        <activity
+            android:name="com.murfy.groupify.activities.EditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.murfy.groupify.activities.CreatePostActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.murfy.groupify.activities.GroupDescriptionActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.murfy.groupify.activities.GroupActivity"
+            android:exported="false" />
         <activity
             android:name="com.murfy.groupify.activities.ProfileActivity"
             android:exported="false" />
