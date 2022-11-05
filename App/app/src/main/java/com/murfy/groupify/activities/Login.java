@@ -45,36 +45,33 @@ public class Login extends AppCompatActivity {
             }
         });
 
-        binding.signup.setOnClickListener(view -> {
+        binding.login.setOnClickListener(view -> {
             String username = binding.usernameInput.getText().toString();
             String password = Objects.requireNonNull(binding.passwordInput.getText()).toString();
 
-            if(!InputValidator.isPasswordValid(password)){
+            new UserApi(getApplicationContext()).login(username, password, new CrudCallback<User>() {
+                @Override
+                public void onSuccess(User user) {
+                    SharedPreferences shared = getSharedPreferences("groupify", MODE_PRIVATE);
+                    shared.edit().putString("current_user", new Gson().toJson(user)).apply();
+
+                    Intent i = new Intent(getApplicationContext(), HomeActivity.class);
+                    startActivity(i);
+                }
+
+                @Override
+                public void onError(CrudError error) {
+                    binding.errorMessage.setText(error.getMessage());
+                    binding.errorMessage.setVisibility(View.VISIBLE);
+                    AnimationHelper.getInstance().animateError(binding.errorMessage);
+                }
+            });if(!InputValidator.isPasswordValid(password)){
                 binding.errorMessage.setText("Password must be at least 8 characters");
                 binding.errorMessage.setVisibility(View.VISIBLE);
                 AnimationHelper.getInstance().animateError(binding.errorMessage);
             }else{
-                new UserApi(getApplicationContext()).login(username, password, new CrudCallback<User>() {
-                    @Override
-                    public void onSuccess(User user) {
-                        SharedPreferences shared = getSharedPreferences("groupify", MODE_PRIVATE);
-                        shared.edit().putString("current_user", new Gson().toJson(user)).apply();
 
-                        Intent i = new Intent(getApplicationContext(), HomeActivity.class);
-                        startActivity(i);
-                    }
-
-                    @Override
-                    public void onError(CrudError error) {
-                        binding.errorMessage.setText(error.getMessage());
-                        binding.errorMessage.setVisibility(View.VISIBLE);
-                        AnimationHelper.getInstance().animateError(binding.errorMessage);
-                    }
-                });
             }
-
-//            Intent i = new Intent(getApplicationContext(), HomeActivity.class);
-//            startActivity(i);
 
         });
 

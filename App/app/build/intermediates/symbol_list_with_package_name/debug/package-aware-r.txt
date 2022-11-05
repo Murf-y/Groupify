@@ -2548,6 +2548,7 @@ drawable on_board_two_background
 drawable on_board_two_dots
 drawable on_board_two_foreground
 drawable profile_avatar_default
+drawable profile_default
 drawable profile_edit_icon
 drawable profile_stats_box
 drawable search_bar_search_icon
@@ -2673,6 +2674,7 @@ id beginOnFirstDraw
 id beginning
 id bestChoice
 id bio
+id bioInput
 id blocking
 id bottom
 id bounce
@@ -2693,6 +2695,7 @@ id center_vertical
 id chain
 id chain2
 id chains
+id changeProfileImageBtn
 id checkbox
 id checked
 id chip
@@ -2805,7 +2808,6 @@ id floating
 id foreground
 id forever
 id fragment_container_view_tag
-id frame
 id frame2
 id frost
 id fullscreen_header
@@ -2873,6 +2875,7 @@ id linearLayout8
 id linearLayout9
 id listMode
 id list_item
+id login
 id loginBackground
 id loginInstead
 id logo
@@ -3001,6 +3004,7 @@ id postablesList
 id posts
 id profileBackArrow
 id profileNotifications
+id profilePhotoEdit
 id progress_circular
 id progress_horizontal
 id radio
@@ -3137,6 +3141,8 @@ id unchecked
 id uniform
 id unlabeled
 id up
+id updateBtn
+id updateProfileError
 id useLogo
 id username
 id usernameError
@@ -3253,6 +3259,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_create_group
 layout activity_create_post
+layout activity_edit_profile
 layout activity_group
 layout activity_group_description
 layout activity_home

@@ -48,6 +48,7 @@ drawable on_board_two_background
 drawable on_board_two_dots
 drawable on_board_two_foreground
 drawable profile_avatar_default
+drawable profile_default
 drawable profile_edit_icon
 drawable profile_stats_box
 drawable search_bar_search_icon
@@ -77,7 +78,9 @@ id backArrow2
 id backArrow3
 id background
 id bio
+id bioInput
 id cancelBtn
+id changeProfileImageBtn
 id circleOne
 id circleOne2
 id circleOne3
@@ -99,7 +102,6 @@ id errorMessage
 id explore
 id filters
 id foreground
-id frame
 id frame2
 id getStartedBtn
 id groupDescriptionInput
@@ -126,6 +128,7 @@ id linearLayout6
 id linearLayout7
 id linearLayout8
 id linearLayout9
+id login
 id loginBackground
 id loginInstead
 id logo
@@ -159,6 +162,7 @@ id postablesList
 id posts
 id profileBackArrow
 id profileNotifications
+id profilePhotoEdit
 id recentSearchesList
 id recentText
 id searchBar
@@ -168,11 +172,14 @@ id signup
 id signupInstead
 id skip
 id top_bar
+id updateBtn
+id updateProfileError
 id username
 id usernameError
 id usernameInput
 layout activity_create_group
 layout activity_create_post
+layout activity_edit_profile
 layout activity_group
 layout activity_group_description
 layout activity_home

@@ -2,6 +2,7 @@ package com.murfy.groupify.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -33,6 +34,9 @@ public class ProfileActivity extends AppCompatActivity {
             binding.filters.setVisibility(View.VISIBLE);
             binding.mygroups.setOnClickListener(view -> changeSection(view, true));
             binding.profileNotifications.setOnClickListener(view -> changeSection(view, false));
+            binding.editIcon.setOnClickListener(view -> {
+                startActivity(new Intent(getApplicationContext(), EditProfileActivity.class));
+            });
         }else{
             checkingMyself = false;
             currentUser = (User) checkingUser;
@@ -47,7 +51,7 @@ public class ProfileActivity extends AppCompatActivity {
         binding.numberOfGroups.setText(currentUser.getNumberOfGroupsJoined());
         binding.numberOfPosts.setText(currentUser.getNumberOfPosts());
         binding.profileBackArrow.setOnClickListener(view -> {
-            finish();
+            startActivity(new Intent(getApplicationContext(), HomeActivity.class));
         });
         updateListView();
     }

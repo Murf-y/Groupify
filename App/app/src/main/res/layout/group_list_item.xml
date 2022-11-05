@@ -23,7 +23,7 @@
         android:maxHeight="175dp"
         android:minWidth="350dp"
         android:minHeight="150dp"
-        android:scaleType="centerCrop"
+        android:scaleType="centerInside"
         app:srcCompat="@drawable/group_default_image"
         tools:ignore="ImageContrastCheck" />
 

@@ -49,4 +49,8 @@ public class User implements Serializable {
     public String getNumberOfPosts() {
         return numberOfPosts;
     }
+
+    public String getPorfilePhotoBase64(){
+        return profile_photo;
+    }
 }

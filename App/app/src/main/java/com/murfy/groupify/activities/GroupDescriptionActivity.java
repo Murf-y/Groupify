@@ -104,6 +104,7 @@ public class GroupDescriptionActivity extends AppCompatActivity {
         binding.backArrow3.setOnClickListener(view -> {
             finish();
         });
+        binding.groupPhoto2.setImageBitmap(currentGroup.getPhoto());
         binding.description.setText(currentGroup.getDescription());
         binding.groupSubjectText.setText(currentGroup.getSubject());
         binding.memberCount.setText(currentGroup.getNumberOfMembers() + " . " + "members");

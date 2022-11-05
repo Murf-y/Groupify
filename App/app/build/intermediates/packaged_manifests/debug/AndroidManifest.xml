@@ -27,6 +27,9 @@
         android:theme="@style/Theme.Groupify"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="com.murfy.groupify.activities.EditProfileActivity"
+            android:exported="false" />
+        <activity
             android:name="com.murfy.groupify.activities.CreatePostActivity"
             android:exported="false" />
         <activity
