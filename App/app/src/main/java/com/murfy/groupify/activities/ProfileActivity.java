@@ -6,13 +6,24 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 
 import com.google.gson.Gson;
 import com.murfy.groupify.R;
+import com.murfy.groupify.adapters.GroupAdapter;
+import com.murfy.groupify.adapters.NotificationAdapter;
+import com.murfy.groupify.api.CrudCallback;
+import com.murfy.groupify.api.CrudError;
+import com.murfy.groupify.api.GroupApi;
+import com.murfy.groupify.api.NotificationApi;
 import com.murfy.groupify.databinding.ActivityProfileBinding;
+import com.murfy.groupify.models.Group;
+import com.murfy.groupify.models.Notification;
 import com.murfy.groupify.models.User;
+import com.murfy.groupify.utils.ListViewHelper;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 public class ProfileActivity extends AppCompatActivity {
 
@@ -58,9 +69,36 @@ public class ProfileActivity extends AppCompatActivity {
 
     private void updateListView(){
         if(showingMyGroups){
+            new GroupApi(getApplicationContext()).getGroupsCreatedByMe(currentUser.getId(), new CrudCallback<ArrayList<Group>>() {
+                @Override
+                public void onSuccess(ArrayList<Group> groups) {
+                    binding.listView.setAdapter(new GroupAdapter(getApplicationContext(), R.layout.group_list_item, groups));
+                    ListViewHelper.getListViewSize(binding.listView);
+                }
 
+                @Override
+                public void onError(CrudError error) {
+                    ArrayList<String> err = new ArrayList<String>();
+                    err.add(error.getMessage());
+                    binding.listView.setAdapter(new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1, err));
+                }
+            });
         }else{
-
+            new NotificationApi(getApplicationContext()).getUserNotifications(currentUser.getId(), new CrudCallback<ArrayList<Notification>>(){
+                @Override
+                public void onSuccess(ArrayList<Notification> notifications) {
+                    ArrayList<Notification> notifications_l = new ArrayList<Notification>();
+                    notifications_l.add(new Notification("1", null, null, "This is a notification", "2022-10-12"));
+                    binding.listView.setAdapter(new NotificationAdapter(getApplicationContext(), R.layout.notification_list_item, notifications_l));
+                    ListViewHelper.getListViewSize(binding.listView);
+                }
+                @Override
+                public void onError(CrudError error){
+                    ArrayList<String> err = new ArrayList<String>();
+                    err.add(error.getMessage());
+                    binding.listView.setAdapter(new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1, err));
+                }
+            });
         }
     }
 

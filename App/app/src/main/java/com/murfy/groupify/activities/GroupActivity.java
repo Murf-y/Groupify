@@ -135,8 +135,6 @@ public class GroupActivity extends Activity {
         startActivity(i);
     }
     private void sendMessage() {
-
-        // todo return the message posted for optimistic update
         new PostApi(getApplicationContext()).postMessage(group.getId(), currentUser.getId(), binding.messageInput.getText().toString(), new CrudCallback<Object>() {
             public void onSuccess(Object obj){
                 binding.messageInput.setText("");

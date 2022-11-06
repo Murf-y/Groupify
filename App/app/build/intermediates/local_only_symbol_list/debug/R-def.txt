@@ -39,6 +39,7 @@ drawable nav_bar_home
 drawable nav_bar_home_grey
 drawable nav_bar_search
 drawable nav_bar_search_grey
+drawable notification_list_item_icon
 drawable on_board_next_btn
 drawable on_board_one_background
 drawable on_board_one_dots
@@ -128,6 +129,7 @@ id linearLayout6
 id linearLayout7
 id linearLayout8
 id linearLayout9
+id listView
 id login
 id loginBackground
 id loginInstead
@@ -142,6 +144,7 @@ id messageContent
 id messageInput
 id mygroups
 id nameAndCount
+id notifMessage
 id notifications
 id numberOfGroups
 id numberOfPosts
@@ -196,6 +199,7 @@ layout activity_signup
 layout activity_splash_screen
 layout group_list_item
 layout member_list_item
+layout notification_list_item
 layout postable_message_list_item
 layout postable_post_list_item
 mipmap ic_launcher

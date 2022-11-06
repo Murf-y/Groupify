@@ -2662,6 +2662,7 @@ drawable notification_bg_low_pressed
 drawable notification_bg_normal
 drawable notification_bg_normal_pressed
 drawable notification_icon_background
+drawable notification_list_item_icon
 drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
@@ -2994,6 +2995,7 @@ id linearLayout7
 id linearLayout8
 id linearLayout9
 id listMode
+id listView
 id list_item
 id login
 id loginBackground
@@ -3081,6 +3083,7 @@ id noState
 id none
 id normal
 id north
+id notifMessage
 id notification_background
 id notification_main_column
 id notification_main_column_container
@@ -3489,6 +3492,7 @@ layout mtrl_picker_text_input_date
 layout mtrl_picker_text_input_date_range
 layout notification_action
 layout notification_action_tombstone
+layout notification_list_item
 layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer

@@ -153,26 +153,7 @@ public class PostApi {
         String createdAt = res.getString("created_at");
         String user_json_string  = res.getString("sender");
         JSONObject sender_json = new JSONObject(user_json_string);
-        User sender=  getUserFromJson(sender_json);
+        User sender=  UserApi.getUserFromJson(sender_json);
         return new Postable(String.valueOf(id), sender, post_photo, title, content, createdAt);
-    }
-
-    public User getUserFromJson(JSONObject res) throws JSONException{
-        int id = res.getInt("id");
-        String stored_username = res.getString("username");
-        String stored_email = res.getString("email");
-        String bio = res.getString("bio");
-        String profile_photo = res.getString("profile_photo");
-        String numberOfGroupsJoined = res.getString("num_groups");
-        String numberOfPosts = res.getString("num_posts");
-        return new User(
-                String.valueOf(id),
-                stored_username,
-                stored_email,
-                bio,
-                profile_photo,
-                numberOfGroupsJoined,
-                numberOfPosts
-        );
     }
 }

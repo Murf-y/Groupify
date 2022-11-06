@@ -32,7 +32,7 @@ public class GroupApi {
         this.context = context;
     }
 
-    public Group getGroupFromJson(JSONObject res) throws JSONException {
+    public static Group getGroupFromJson(JSONObject res) throws JSONException {
         int id = res.getInt("id");
         String subject = res.getString("subject");
         String description = res.getString("description");

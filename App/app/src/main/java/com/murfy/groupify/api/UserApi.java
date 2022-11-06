@@ -32,7 +32,7 @@ public class UserApi {
         this.context = context;
     }
 
-    public User getUserFromJson(JSONObject res) throws JSONException{
+    public static User getUserFromJson(JSONObject res) throws JSONException{
         int id = res.getInt("id");
         String stored_username = res.getString("username");
         String stored_email = res.getString("email");

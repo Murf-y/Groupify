@@ -2661,6 +2661,7 @@ int drawable notification_bg_low_pressed 0x7f0700e1
 int drawable notification_bg_normal 0x7f0700e2
 int drawable notification_bg_normal_pressed 0x7f0700e3
 int drawable notification_icon_background 0x7f0700e4
+int drawable notification_list_item_icon 0x7f070103
 int drawable notification_template_icon_bg 0x7f0700e5
 int drawable notification_template_icon_low_bg 0x7f0700e6
 int drawable notification_tile_bg 0x7f0700e7
@@ -2993,6 +2994,7 @@ int id linearLayout7 0x7f090127
 int id linearLayout8 0x7f090128
 int id linearLayout9 0x7f090129
 int id listMode 0x7f09012a
+int id listView 0x7f09024e
 int id list_item 0x7f09012b
 int id login 0x7f09012c
 int id loginBackground 0x7f09012d
@@ -3080,6 +3082,7 @@ int id noState 0x7f09017e
 int id none 0x7f09017f
 int id normal 0x7f090180
 int id north 0x7f090181
+int id notifMessage 0x7f09024f
 int id notification_background 0x7f090182
 int id notification_main_column 0x7f090183
 int id notification_main_column_container 0x7f090184
@@ -3488,6 +3491,7 @@ int layout mtrl_picker_text_input_date 0x7f0c006a
 int layout mtrl_picker_text_input_date_range 0x7f0c006b
 int layout notification_action 0x7f0c006c
 int layout notification_action_tombstone 0x7f0c006d
+int layout notification_list_item 0x7f0c0078
 int layout notification_template_custom_big 0x7f0c006e
 int layout notification_template_icon_group 0x7f0c006f
 int layout notification_template_part_chronometer 0x7f0c0070
