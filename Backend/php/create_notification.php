@@ -17,8 +17,18 @@ while($ele = $result->fetch_assoc()){
 
 foreach ($users as $key => $user) {
     if ($user["user_id"] != $user_id) {
-        $query = $connection->prepare("INSERT INTO notifications(receiver_id, message) VALUES(?, ?)");
-        $query->bind_param("is", $user["user_id"], $message);
+
+        $query = $connection -> prepare("SELECT * FROM notifications WHERE user_id = ?, group_id = ?, seen = False");
+        $query->bind_param("i", $group_id);
         $query->execute();
+        $result = $query->get_result();
+
+        if($result->fetch_assoc() != null){
+            $query = $connection->prepare("INSERT INTO notifications(receiver_id, message) VALUES(?, ?)");
+            $query->bind_param("is", $user["user_id"], $message);
+            $query->execute();
+
+            return json_encode(array("status" => 200));
+        }
     }
 }
