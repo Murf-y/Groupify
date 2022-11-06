@@ -14,3 +14,11 @@ $result = $query->get_result();
 while($ele = $result->fetch_assoc()){
     $users[] = $ele;
 }
+
+foreach ($users as $key => $user) {
+    if ($user["user_id"] != $user_id) {
+        $query = $connection->prepare("INSERT INTO notifications(receiver_id, message) VALUES(?, ?)");
+        $query->bind_param("is", $user["user_id"], $message);
+        $query->execute();
+    }
+}
