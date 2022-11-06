@@ -2,6 +2,7 @@ package com.murfy.groupify.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
@@ -14,6 +15,7 @@ import android.widget.ArrayAdapter;
 
 import com.google.gson.Gson;
 import com.murfy.groupify.R;
+import com.murfy.groupify.adapters.PostAdapter;
 import com.murfy.groupify.api.CrudCallback;
 import com.murfy.groupify.api.CrudError;
 import com.murfy.groupify.api.GroupMembersApi;
@@ -29,7 +31,7 @@ import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class GroupActivity extends AppCompatActivity {
+public class GroupActivity extends Activity {
 
     Group group;
     User currentUser;
@@ -117,11 +119,7 @@ public class GroupActivity extends AppCompatActivity {
         new PostApi(getApplicationContext()).getPostables(group.getId(), new CrudCallback<ArrayList<Postable>>() {
             @Override
             public void onSuccess(ArrayList<Postable> postables) {
-                ArrayList<String> test = new ArrayList<>();
-                for (Postable post: postables){
-                    test.add(post.getContent());
-                }
-                binding.postablesList.setAdapter(new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1, test));
+                binding.postablesList.setAdapter(new PostAdapter(getApplicationContext(), postables));
             }
 
             @Override

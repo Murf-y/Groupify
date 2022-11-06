@@ -1,2 +1,6 @@
-package com.murfy.groupify.models;public class PostType {
+package com.murfy.groupify.models;
+
+public enum PostType {
+    Message,
+    Post
 }

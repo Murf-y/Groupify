@@ -133,12 +133,12 @@ id loginBackground
 id loginInstead
 id logo
 id logo_b
-id memberBio
 id memberCount
 id memberName
 id memberPhoto
 id membersCount
 id membersList
+id messageContent
 id messageInput
 id mygroups
 id nameAndCount
@@ -157,6 +157,8 @@ id pic
 id pickusername
 id postBtn
 id postContentInput
+id postImage
+id postTitle
 id postTitleInput
 id postablesList
 id posts
@@ -167,6 +169,7 @@ id recentSearchesList
 id recentText
 id searchBar
 id searchButton
+id sentAt
 id seperator
 id signup
 id signupInstead
@@ -193,6 +196,8 @@ layout activity_signup
 layout activity_splash_screen
 layout group_list_item
 layout member_list_item
+layout postable_message_list_item
+layout postable_post_list_item
 mipmap ic_launcher
 mipmap ic_launcher_round
 string app_name

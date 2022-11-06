@@ -40,7 +40,7 @@ public class GroupMemberAdapter extends ArrayAdapter<User> {
         TextView userName = convertView.findViewById(R.id.memberName);
         userName.setText(user.getUsername());
 
-        TextView userBio = convertView.findViewById(R.id.memberBio);
+        TextView userBio = convertView.findViewById(R.id.messageContent);
         userBio.setText(user.getBio());
 
         return convertView;
