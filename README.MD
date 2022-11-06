@@ -10,7 +10,7 @@ Current application design is present in Design folder, available in the reposit
 - Pdf file of the design
 - Figma file of the design
 
-<img src="./Design/preview.">
+<img src="./Design/preview.png">
 
 # How to run the app
 - Clone the repository 
