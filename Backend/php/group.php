@@ -66,7 +66,7 @@ else if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         }
 
         for ($i = 0; $i < count($groups); $i++) {
-            $groupid = $groups[0]["id"];
+            $groupid = $groups[$i]["id"];
             $query = $connection->prepare("SELECT COUNT(*) AS number_of_members FROM group_members WHERE group_id = ?");
             $query->bind_param("i", $groupid);
             $query->execute();

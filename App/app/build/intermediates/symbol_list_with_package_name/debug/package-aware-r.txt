@@ -2572,6 +2572,7 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable disabled_button
 drawable divider_transparent
+drawable full_circle
 drawable group_card_members_icon
 drawable group_default_image
 drawable group_item_card
@@ -2792,7 +2793,6 @@ id autoCompleteToEnd
 id autoCompleteToStart
 id avatar
 id backArrow
-id backArrow2
 id backArrow3
 id background
 id barrier
@@ -2934,6 +2934,7 @@ id fullscreen_header
 id getStartedBtn
 id ghost_view
 id ghost_view_holder
+id goBackFromGroup
 id gone
 id graph
 id graph_wrap
@@ -3084,6 +3085,8 @@ id none
 id normal
 id north
 id notifMessage
+id notificationCounter
+id notificationFrame
 id notification_background
 id notification_main_column
 id notification_main_column_container

@@ -14,6 +14,7 @@ import com.murfy.groupify.adapters.GroupAdapter;
 import com.murfy.groupify.api.CrudCallback;
 import com.murfy.groupify.api.CrudError;
 import com.murfy.groupify.api.GroupApi;
+import com.murfy.groupify.api.NotificationApi;
 import com.murfy.groupify.databinding.ActivityHomeBinding;
 import com.murfy.groupify.models.Group;
 import com.murfy.groupify.models.User;
@@ -38,6 +39,23 @@ public class HomeActivity extends AppCompatActivity {
 
         currentUser = new Gson().fromJson(getSharedPreferences("groupify", MODE_PRIVATE).getString("current_user", "{}"), User.class);
 
+        new NotificationApi(getApplicationContext()).getNotificationsCount(currentUser.getId(), new CrudCallback<Integer>() {
+            @Override
+            public void onSuccess(Integer integer) {
+                if(integer <= 0){
+                    binding.notificationFrame.setVisibility(View.GONE);
+                }else{
+                    binding.notificationFrame.setVisibility(View.VISIBLE);
+                    binding.notificationCounter.setText(integer+"");
+                }
+            }
+
+            @Override
+            public void onError(CrudError error) {
+                binding.notificationFrame.setVisibility(View.GONE);
+            }
+        });
+
         binding.avatar.setImageBitmap(currentUser.getProfilePhoto());
         binding.avatar.setOnClickListener(view -> {
             Intent i = new Intent(getApplicationContext(), ProfileActivity.class);
@@ -56,7 +74,11 @@ public class HomeActivity extends AppCompatActivity {
             startActivity(i);
         });
 
-
+        binding.notifications.setOnClickListener(view -> {
+            Intent i = new Intent(getApplicationContext(), ProfileActivity.class);
+            i.putExtra("showingMyGroups", false);
+            startActivity(i);
+        });
         updateListView();
         binding.groupsListView.setOnItemClickListener((adapterView, view, i, l) -> {
             Intent intent = new Intent(getApplicationContext(), GroupActivity.class);

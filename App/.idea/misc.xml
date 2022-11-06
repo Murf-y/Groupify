@@ -16,6 +16,7 @@
         <entry key="..\:/xampp/htdocs/Groupify/App/app/src/main/res/drawable/create_group_image_input.xml" value="0.1755" />
         <entry key="..\:/xampp/htdocs/Groupify/App/app/src/main/res/drawable/disabled_button.xml" value="0.1735" />
         <entry key="..\:/xampp/htdocs/Groupify/App/app/src/main/res/drawable/divider_transparent.xml" value="0.1735" />
+        <entry key="..\:/xampp/htdocs/Groupify/App/app/src/main/res/drawable/full_circle.xml" value="0.1755" />
         <entry key="..\:/xampp/htdocs/Groupify/App/app/src/main/res/drawable/group_default_image.xml" value="0.1755" />
         <entry key="..\:/xampp/htdocs/Groupify/App/app/src/main/res/drawable/group_item_card.xml" value="0.1745" />
         <entry key="..\:/xampp/htdocs/Groupify/App/app/src/main/res/drawable/home_line_separator.xml" value="0.1755" />
@@ -33,17 +34,17 @@
         <entry key="..\:/xampp/htdocs/Groupify/App/app/src/main/res/layout/activity_create_group.xml" value="0.132" />
         <entry key="..\:/xampp/htdocs/Groupify/App/app/src/main/res/layout/activity_create_post.xml" value="0.14814814814814814" />
         <entry key="..\:/xampp/htdocs/Groupify/App/app/src/main/res/layout/activity_edit_profile.xml" value="0.268" />
-        <entry key="..\:/xampp/htdocs/Groupify/App/app/src/main/res/layout/activity_group.xml" value="0.13675213675213677" />
+        <entry key="..\:/xampp/htdocs/Groupify/App/app/src/main/res/layout/activity_group.xml" value="0.1" />
         <entry key="..\:/xampp/htdocs/Groupify/App/app/src/main/res/layout/activity_group_description.xml" value="0.1" />
-        <entry key="..\:/xampp/htdocs/Groupify/App/app/src/main/res/layout/activity_home.xml" value="0.132" />
-        <entry key="..\:/xampp/htdocs/Groupify/App/app/src/main/res/layout/activity_login.xml" value="0.268" />
+        <entry key="..\:/xampp/htdocs/Groupify/App/app/src/main/res/layout/activity_home.xml" value="0.2" />
+        <entry key="..\:/xampp/htdocs/Groupify/App/app/src/main/res/layout/activity_login.xml" value="0.132" />
         <entry key="..\:/xampp/htdocs/Groupify/App/app/src/main/res/layout/activity_on_board_one.xml" value="0.132" />
         <entry key="..\:/xampp/htdocs/Groupify/App/app/src/main/res/layout/activity_on_board_three.xml" value="0.1" />
         <entry key="..\:/xampp/htdocs/Groupify/App/app/src/main/res/layout/activity_on_board_two.xml" value="0.1" />
         <entry key="..\:/xampp/htdocs/Groupify/App/app/src/main/res/layout/activity_profile.xml" value="0.2" />
         <entry key="..\:/xampp/htdocs/Groupify/App/app/src/main/res/layout/activity_search.xml" value="0.1" />
         <entry key="..\:/xampp/htdocs/Groupify/App/app/src/main/res/layout/activity_sign_up.xml" value="0.10526315789473684" />
-        <entry key="..\:/xampp/htdocs/Groupify/App/app/src/main/res/layout/activity_signup.xml" value="0.36" />
+        <entry key="..\:/xampp/htdocs/Groupify/App/app/src/main/res/layout/activity_signup.xml" value="0.1" />
         <entry key="..\:/xampp/htdocs/Groupify/App/app/src/main/res/layout/activity_splash_screen.xml" value="0.132" />
         <entry key="..\:/xampp/htdocs/Groupify/App/app/src/main/res/layout/group_list_item.xml" value="0.268" />
         <entry key="..\:/xampp/htdocs/Groupify/App/app/src/main/res/layout/member_list_item.xml" value="0.36" />

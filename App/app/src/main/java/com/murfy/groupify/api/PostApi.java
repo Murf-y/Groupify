@@ -121,6 +121,7 @@ public class PostApi {
                         if(status == 200){
                             ArrayList<Postable> postables = new ArrayList<>();
                             JSONArray postables_array = res.getJSONArray("data");
+
                             for(int i = 0; i < postables_array.length(); i++){
                                 JSONObject group = postables_array.getJSONObject(i);
                                 postables.add(getPostableFromJson(group));

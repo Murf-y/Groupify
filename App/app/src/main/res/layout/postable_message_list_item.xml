@@ -55,7 +55,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/worksans_regular"
-            android:text="Message Content" />
+            android:text="Message Content"
+            android:textColor="@color/dark_blue_600" />
     </LinearLayout>
 
 </LinearLayout>

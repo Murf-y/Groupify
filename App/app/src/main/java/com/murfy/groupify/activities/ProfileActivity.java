@@ -38,16 +38,22 @@ public class ProfileActivity extends AppCompatActivity {
         binding = ActivityProfileBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        boolean shouldShowMyGroups = getIntent().getBooleanExtra("showingMyGroups", true);
         Serializable checkingUser = getIntent().getSerializableExtra("checking_user");
         if(checkingUser == null){
             checkingMyself = true;
             currentUser = new Gson().fromJson(getSharedPreferences("groupify", MODE_PRIVATE).getString("current_user", "{}"), User.class);
             binding.filters.setVisibility(View.VISIBLE);
-            binding.mygroups.setOnClickListener(view -> changeSection(view, true));
-            binding.profileNotifications.setOnClickListener(view -> changeSection(view, false));
+            binding.mygroups.setOnClickListener(view -> changeSection(true));
+            binding.profileNotifications.setOnClickListener(view -> changeSection(false));
             binding.editIcon.setOnClickListener(view -> {
                 startActivity(new Intent(getApplicationContext(), EditProfileActivity.class));
             });
+            if(!shouldShowMyGroups){
+                binding.mygroups.setTextColor(getResources().getColor(R.color.grey_200));
+                binding.profileNotifications.setTextColor(getResources().getColor(R.color.dark_blue_700));
+                showingMyGroups = false;
+            }
         }else{
             checkingMyself = false;
             currentUser = (User) checkingUser;
@@ -87,10 +93,21 @@ public class ProfileActivity extends AppCompatActivity {
             new NotificationApi(getApplicationContext()).getUserNotifications(currentUser.getId(), new CrudCallback<ArrayList<Notification>>(){
                 @Override
                 public void onSuccess(ArrayList<Notification> notifications) {
-                    ArrayList<Notification> notifications_l = new ArrayList<Notification>();
-                    notifications_l.add(new Notification("1", null, null, "This is a notification", "2022-10-12"));
-                    binding.listView.setAdapter(new NotificationAdapter(getApplicationContext(), R.layout.notification_list_item, notifications_l));
-                    ListViewHelper.getListViewSize(binding.listView);
+
+                    if(notifications.size() == 0){
+                        ArrayList<String> empty_notification = new ArrayList<>();
+                        empty_notification.add("No new notifications");
+                        binding.listView.setAdapter(new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1, empty_notification));
+                        ListViewHelper.getListViewSize(binding.listView);
+                    }else{
+                        binding.listView.setAdapter(new NotificationAdapter(getApplicationContext(), R.layout.notification_list_item, notifications));
+                        binding.listView.setOnItemClickListener((adapterView, view, i, l) -> {
+                            Intent intent = new Intent(getApplicationContext(), GroupActivity.class);
+                            intent.putExtra("group", notifications.get(i).getGroup_source());
+                            startActivity(intent);
+                        });
+                        ListViewHelper.getListViewSize(binding.listView);
+                    }
                 }
                 @Override
                 public void onError(CrudError error){
@@ -102,7 +119,7 @@ public class ProfileActivity extends AppCompatActivity {
         }
     }
 
-    private void changeSection(View view, boolean shouldShowMyGroups) {
+    private void changeSection(boolean shouldShowMyGroups) {
         if(!showingMyGroups && shouldShowMyGroups) {
             binding.profileNotifications.setTextColor(getResources().getColor(R.color.grey_200));
             binding.mygroups.setTextColor(getResources().getColor(R.color.dark_blue_700));

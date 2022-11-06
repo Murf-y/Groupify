@@ -2571,6 +2571,7 @@ int drawable design_password_eye 0x7f070087
 int drawable design_snackbar_background 0x7f070088
 int drawable disabled_button 0x7f070089
 int drawable divider_transparent 0x7f07008a
+int drawable full_circle 0x7f070104
 int drawable group_card_members_icon 0x7f07008b
 int drawable group_default_image 0x7f07008c
 int drawable group_item_card 0x7f07008d
@@ -2791,7 +2792,6 @@ int id autoCompleteToEnd 0x7f09005c
 int id autoCompleteToStart 0x7f09005d
 int id avatar 0x7f09005e
 int id backArrow 0x7f09005f
-int id backArrow2 0x7f090060
 int id backArrow3 0x7f090061
 int id background 0x7f090062
 int id barrier 0x7f090063
@@ -2933,6 +2933,7 @@ int id fullscreen_header 0x7f0900ea
 int id getStartedBtn 0x7f0900eb
 int id ghost_view 0x7f0900ec
 int id ghost_view_holder 0x7f0900ed
+int id goBackFromGroup 0x7f090250
 int id gone 0x7f0900ee
 int id graph 0x7f0900ef
 int id graph_wrap 0x7f0900f0
@@ -3083,6 +3084,8 @@ int id none 0x7f09017f
 int id normal 0x7f090180
 int id north 0x7f090181
 int id notifMessage 0x7f09024f
+int id notificationCounter 0x7f090251
+int id notificationFrame 0x7f090252
 int id notification_background 0x7f090182
 int id notification_main_column 0x7f090183
 int id notification_main_column_container 0x7f090184

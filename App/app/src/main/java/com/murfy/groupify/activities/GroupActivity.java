@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.method.HideReturnsTransformationMethod;
@@ -28,10 +29,12 @@ import com.murfy.groupify.models.User;
 import com.murfy.groupify.utils.ImageEncoding;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class GroupActivity extends Activity {
+public class GroupActivity extends AppCompatActivity {
 
     Group group;
     User currentUser;
@@ -71,7 +74,7 @@ public class GroupActivity extends Activity {
             }
         });
 
-        binding.backArrow2.setOnClickListener(view -> {
+        binding.goBackFromGroup.setOnClickListener(view -> {
             finish();
         });
 
@@ -119,7 +122,17 @@ public class GroupActivity extends Activity {
         new PostApi(getApplicationContext()).getPostables(group.getId(), new CrudCallback<ArrayList<Postable>>() {
             @Override
             public void onSuccess(ArrayList<Postable> postables) {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                    postables.sort(new Comparator<Postable>() {
+                        @Override
+                        public int compare(Postable t2, Postable t1) {
+                            return t2.getCreated_at().compareTo(t1.getCreated_at());
+                        }
+                    });
+                }
                 binding.postablesList.setAdapter(new PostAdapter(getApplicationContext(), postables));
+                binding.postablesList.setSelection(postables.size() - 1);
+                //binding.postablesList.smoothScrollByOffset(binding.postablesList.getMaxScrollAmount());
             }
 
             @Override

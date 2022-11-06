@@ -57,15 +57,18 @@ public class GroupMembersApi {
         Crud.getInstance(context).addRequestToQueue(stringRequest);
     }
 
-    public void joinGroup(String user_id, String group_id, CrudCallback<Object> callback) {
+    public void joinGroup(String user_id, String group_id, CrudCallback<Group> callback) {
         StringRequest stringRequest = new StringRequest(Request.Method.POST,
                 Crud.base_url + group_members_api_path,
                 response -> {
                     try {
+
+                        Log.i("DEBUG", response);
                         JSONObject res = new JSONObject(response);
                         int status = res.getInt("status");
                         if(status == 200){
-                            callback.onSuccess(null);
+                            Group group = GroupApi.getGroupFromJson(res.getJSONObject("data"));
+                            callback.onSuccess(group);
                         }else{
                             CrudError error = new CrudError(status, res.getString("message"));
                             callback.onError(error);
@@ -96,7 +99,7 @@ public class GroupMembersApi {
 
     public void leaveGroup(String user_id, String group_id, CrudCallback<Object> callback) {
         StringRequest stringRequest = new StringRequest(Request.Method.DELETE,
-                Crud.base_url + group_members_api_path,
+                Crud.base_url + group_members_api_path + "?user_id="+user_id+"&group_id="+group_id,
                 response -> {
                     try {
                         JSONObject res = new JSONObject(response);

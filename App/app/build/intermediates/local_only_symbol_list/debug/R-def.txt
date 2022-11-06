@@ -22,6 +22,7 @@ drawable button_red
 drawable circle
 drawable disabled_button
 drawable divider_transparent
+drawable full_circle
 drawable group_card_members_icon
 drawable group_default_image
 drawable group_item_card
@@ -75,7 +76,6 @@ id addImageLabel
 id alreadyHaveAccount
 id avatar
 id backArrow
-id backArrow2
 id backArrow3
 id background
 id bio
@@ -105,6 +105,7 @@ id filters
 id foreground
 id frame2
 id getStartedBtn
+id goBackFromGroup
 id groupDescriptionInput
 id groupImageView
 id groupName
@@ -145,6 +146,8 @@ id messageInput
 id mygroups
 id nameAndCount
 id notifMessage
+id notificationCounter
+id notificationFrame
 id notifications
 id numberOfGroups
 id numberOfPosts

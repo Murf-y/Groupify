@@ -18,9 +18,9 @@
         android:hint="Enter message"
         android:inputType="textPersonName"
         android:paddingLeft="20dp"
-        android:paddingTop="20dp"
+        android:paddingTop="15dp"
         android:paddingRight="20dp"
-        android:paddingBottom="20dp"
+        android:paddingBottom="15dp"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,9 +44,10 @@
         app:layout_constraintVertical_bias="0.0">
 
         <ImageView
-            android:id="@+id/backArrow2"
+            android:id="@+id/goBackFromGroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="0"
             android:paddingLeft="20dp"
             android:paddingRight="10dp"
             app:srcCompat="@drawable/arrow_left" />
