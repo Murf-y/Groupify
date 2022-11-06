@@ -50,12 +50,25 @@ else if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     $query = $connection->prepare("INSERT INTO group_members(group_id, user_id) VALUES(?, ?)");
     $query->bind_param("ii", $group_id, $user_id);
     $query->execute();
+    $query = $connection->prepare("SELECT * FROM groups WHERE id = ?");
+    $query->bind_param("i", $group_id);
+    $query->execute();
+    $group = $query->get_result()->fetch_assoc();
 
-    echo json_encode(array("status" => 200));
+    $query = $connection->prepare("SELECT COUNT(*) AS number_of_members FROM group_members WHERE group_id = ?");
+    $query->bind_param("i", $group_id);
+    $query->execute();
+    $result = $query->get_result();
+    $row = $result->fetch_assoc();
+    $group["number_of_members"] = $row["number_of_members"];
+
+    echo json_encode(array("status" => 200, "data" => $group));
+
+    //echo json_encode(array("status" => 200));
 }
 else if ($_SERVER['REQUEST_METHOD'] === 'DELETE'){
-    $user_id = $_POST['user_id'];
-    $group_id = $_POST['group_id'];
+    $user_id = $_GET['user_id'];
+    $group_id = $_GET['group_id'];
 
     $query = $connection->prepare("DELETE FROM group_members WHERE group_id = ? AND user_id = ?");
     $query->bind_param("ii", $group_id, $user_id);

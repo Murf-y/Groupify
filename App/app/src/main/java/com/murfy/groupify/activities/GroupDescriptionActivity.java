@@ -39,11 +39,11 @@ public class GroupDescriptionActivity extends AppCompatActivity {
                     binding.joinOrLeaveButton.setText("JOIN");
                     binding.joinOrLeaveButton.setBackground(getDrawable(R.drawable.button));
                     binding.joinOrLeaveButton.setOnClickListener(view -> {
-                        new GroupMembersApi(getApplicationContext()).joinGroup(currentUser.getId(), currentGroup.getId(), new CrudCallback<Object>(){
+                        new GroupMembersApi(getApplicationContext()).joinGroup(currentUser.getId(), currentGroup.getId(), new CrudCallback<Group>(){
                             @Override
-                            public void onSuccess(Object o) {
+                            public void onSuccess(Group group) {
                                 Intent i = new Intent(getApplicationContext(), GroupActivity.class);
-                                i.putExtra("group", currentGroup);
+                                i.putExtra("group", group);
                                 startActivity(i);
                             }
 

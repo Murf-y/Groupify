@@ -68,3 +68,61 @@ function getuserinfo($connection, $username){
 
     return $user;
 }
+
+function sendNotification($connection, $user_id, $group_id){
+
+    // get all users in the group
+    $query = $connection->prepare("SELECT * FROM group_members WHERE group_id = ?");
+    $query->bind_param("i", $group_id);
+    $query->execute();
+    $result = $query->get_result();
+    $users = array();
+    while($row = $result->fetch_assoc()){
+        $users[] = $row;
+    }
+
+    // get all users that already have a notification for this group and notification "seen" is false
+    $query = $connection->prepare("SELECT * FROM notifications WHERE group_id = ? AND seen = 0");
+    $query->bind_param("i", $group_id);
+    $query->execute();
+    $result = $query->get_result();
+    $users_with_notification = array();
+    while($row = $result->fetch_assoc()){
+        $users_with_notification[] = $row;
+    }
+
+    // send a notification to all users in the group except the user that sent the post
+    // and except the users that already have a notification for this group and notification "seen" is false
+
+    $query = $connection->prepare("SELECT * FROM groups WHERE id = ?");
+    $query->bind_param("i", $group_id);
+    $query->execute();
+    $result = $query->get_result();
+    $group = $result->fetch_assoc();
+    
+    $query = $connection->prepare("SELECT * FROM users WHERE id = ?");
+    $query->bind_param("i", $user_id);
+    $query->execute();
+    $result = $query->get_result();
+    $sender = $result->fetch_assoc();
+
+    foreach($users as $user){
+        if($user["user_id"] != $user_id){
+            $found = false;
+            foreach($users_with_notification as $user_with_notification){
+                if($user_with_notification["receiver_id"] == $user["user_id"]){
+                    $found = true;
+                    break;
+                }
+            }
+            if(!$found){
+
+                $message = $sender["username"] . " sent a message in " . $group["subject"];
+                $query = $connection->prepare("INSERT INTO notifications (receiver_id, group_id, message) VALUES (?, ?, ?)");
+                $query->bind_param("iis", $user["user_id"], $group_id, $message);
+                $query->execute();
+
+            }
+        }
+    }
+}

@@ -2,7 +2,9 @@ package com.murfy.groupify.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.method.HideReturnsTransformationMethod;
@@ -14,6 +16,7 @@ import android.widget.ArrayAdapter;
 
 import com.google.gson.Gson;
 import com.murfy.groupify.R;
+import com.murfy.groupify.adapters.PostAdapter;
 import com.murfy.groupify.api.CrudCallback;
 import com.murfy.groupify.api.CrudError;
 import com.murfy.groupify.api.GroupMembersApi;
@@ -26,6 +29,8 @@ import com.murfy.groupify.models.User;
 import com.murfy.groupify.utils.ImageEncoding;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -69,7 +74,7 @@ public class GroupActivity extends AppCompatActivity {
             }
         });
 
-        binding.backArrow2.setOnClickListener(view -> {
+        binding.goBackFromGroup.setOnClickListener(view -> {
             finish();
         });
 
@@ -117,11 +122,17 @@ public class GroupActivity extends AppCompatActivity {
         new PostApi(getApplicationContext()).getPostables(group.getId(), new CrudCallback<ArrayList<Postable>>() {
             @Override
             public void onSuccess(ArrayList<Postable> postables) {
-                ArrayList<String> test = new ArrayList<>();
-                for (Postable post: postables){
-                    test.add(post.getContent());
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                    postables.sort(new Comparator<Postable>() {
+                        @Override
+                        public int compare(Postable t2, Postable t1) {
+                            return t2.getCreated_at().compareTo(t1.getCreated_at());
+                        }
+                    });
                 }
-                binding.postablesList.setAdapter(new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1, test));
+                binding.postablesList.setAdapter(new PostAdapter(getApplicationContext(), postables));
+                binding.postablesList.setSelection(postables.size() - 1);
+                //binding.postablesList.smoothScrollByOffset(binding.postablesList.getMaxScrollAmount());
             }
 
             @Override
@@ -137,8 +148,6 @@ public class GroupActivity extends AppCompatActivity {
         startActivity(i);
     }
     private void sendMessage() {
-
-        // todo return the message posted for optimistic update
         new PostApi(getApplicationContext()).postMessage(group.getId(), currentUser.getId(), binding.messageInput.getText().toString(), new CrudCallback<Object>() {
             public void onSuccess(Object obj){
                 binding.messageInput.setText("");

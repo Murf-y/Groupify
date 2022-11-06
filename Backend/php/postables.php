@@ -1,6 +1,7 @@
 <?php 
 
 include('connection.php');
+include('helpers.php');
 
 // if get request is sent from the client with group id, return the posts in that group ordered by date created 
 if($_SERVER['REQUEST_METHOD'] === 'GET'){
@@ -45,5 +46,7 @@ else if($_SERVER['REQUEST_METHOD'] === 'POST'){
     $query = $connection->prepare("INSERT INTO postables (group_id, user_id, title, content, post_photo) VALUES (?, ?, ?, ?, ?)");
     $query->bind_param("iisss", $group_id, $user_id, $title, $content, $post_photo);
     $query->execute();
+
+    sendNotification($connection, $user_id, $group_id);
     echo json_encode(array("status" => 200));
 }

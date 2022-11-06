@@ -28,13 +28,39 @@
             android:cropToPadding="true"
             app:srcCompat="@drawable/logo_b" />
 
-        <ImageView
-            android:id="@+id/notifications"
+        <FrameLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingLeft="70dp"
-            app:srcCompat="@drawable/home_notifications_bell" />
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/notifications"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="70dp"
+                app:srcCompat="@drawable/home_notifications_bell" />
+
+            <FrameLayout
+                android:id="@+id/notificationFrame"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="90dp"
+                android:paddingTop="20dp"
+                tools:visibility="gone">
+
+                <TextView
+                    android:id="@+id/notificationCounter"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/full_circle"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textColor="@color/dark_blue_800"
+                    android:textSize="14sp" />
+            </FrameLayout>
+
+        </FrameLayout>
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/avatar"

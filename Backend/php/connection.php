@@ -57,10 +57,12 @@ $connection->query("CREATE TABLE IF NOT EXISTS postables (
 $connection->query("CREATE TABLE IF NOT EXISTS notifications (
     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     receiver_id INT(6) UNSIGNED NOT NULL,
+    group_id INT(6) UNSIGNED NOT NULL,
     seen BOOLEAN DEFAULT FALSE,
     message VARCHAR(100) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    FOREIGN KEY (receiver_id) REFERENCES users(id)
+    FOREIGN KEY (receiver_id) REFERENCES users(id),
+    FOREIGN KEY (group_id) REFERENCES groups(id)
 )");
 
 $connection->query("CREATE TABLE IF NOT EXISTS recent_searches (

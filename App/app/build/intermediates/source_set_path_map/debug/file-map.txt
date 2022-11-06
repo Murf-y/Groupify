@@ -17,7 +17,7 @@ com.murfy.groupify.app-appcompat-resources-1.5.1-15 C:\Users\USER\.gradle\caches
 com.murfy.groupify.app-emoji2-1.2.0-16 C:\Users\USER\.gradle\caches\transforms-3\9f99c19470d8bf18ee15270d078c3173\transformed\emoji2-1.2.0\res
 com.murfy.groupify.app-transition-1.2.0-17 C:\Users\USER\.gradle\caches\transforms-3\a2c7c23218f384913fe2512ef70723c2\transformed\transition-1.2.0\res
 com.murfy.groupify.app-lifecycle-process-2.4.1-18 C:\Users\USER\.gradle\caches\transforms-3\a68586d9ac6fc4872d4884a947d1c1d5\transformed\lifecycle-process-2.4.1\res
-com.murfy.groupify.app-material-1.6.1-19 C:\Users\USER\.gradle\caches\transforms-3\b6f52d92dea29c0a7f49d4078033a89a\transformed\material-1.6.1\res
+com.murfy.groupify.app-material-1.7.0-19 C:\Users\USER\.gradle\caches\transforms-3\b26501d9553d08a11b3cfe721422cf55\transformed\material-1.7.0\res
 com.murfy.groupify.app-annotation-experimental-1.1.0-20 C:\Users\USER\.gradle\caches\transforms-3\cdcb8e50109b2c2b9e961e9ab007ca34\transformed\annotation-experimental-1.1.0\res
 com.murfy.groupify.app-cardview-1.0.0-21 C:\Users\USER\.gradle\caches\transforms-3\d4c9e45086bb311ab5f003976f396c14\transformed\cardview-1.0.0\res
 com.murfy.groupify.app-startup-runtime-1.1.1-22 C:\Users\USER\.gradle\caches\transforms-3\dd26f7af4232aa82cd84cd79d410c8bc\transformed\startup-runtime-1.1.1\res

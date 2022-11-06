@@ -28,25 +28,6 @@ public class GroupMembersApi {
         this.context = context;
     }
 
-    public User getUserFromJson(JSONObject res) throws JSONException{
-        int id = res.getInt("id");
-        String stored_username = res.getString("username");
-        String stored_email = res.getString("email");
-        String bio = res.getString("bio");
-        String profile_photo = res.getString("profile_photo");
-        String numberOfGroupsJoined = res.getString("num_groups");
-        String numberOfPosts = res.getString("num_posts");
-        return new User(
-                String.valueOf(id),
-                stored_username,
-                stored_email,
-                bio,
-                profile_photo,
-                numberOfGroupsJoined,
-                numberOfPosts
-        );
-    }
-
     public void isMemberInGroup(String user_id, String group_id, CrudCallback<Boolean> callback){
         StringRequest stringRequest = new StringRequest(Request.Method.GET,
                 Crud.base_url + group_members_api_path+"?user_id="+user_id+"&group_id="+group_id,
@@ -76,15 +57,18 @@ public class GroupMembersApi {
         Crud.getInstance(context).addRequestToQueue(stringRequest);
     }
 
-    public void joinGroup(String user_id, String group_id, CrudCallback<Object> callback) {
+    public void joinGroup(String user_id, String group_id, CrudCallback<Group> callback) {
         StringRequest stringRequest = new StringRequest(Request.Method.POST,
                 Crud.base_url + group_members_api_path,
                 response -> {
                     try {
+
+                        Log.i("DEBUG", response);
                         JSONObject res = new JSONObject(response);
                         int status = res.getInt("status");
                         if(status == 200){
-                            callback.onSuccess(null);
+                            Group group = GroupApi.getGroupFromJson(res.getJSONObject("data"));
+                            callback.onSuccess(group);
                         }else{
                             CrudError error = new CrudError(status, res.getString("message"));
                             callback.onError(error);
@@ -115,7 +99,7 @@ public class GroupMembersApi {
 
     public void leaveGroup(String user_id, String group_id, CrudCallback<Object> callback) {
         StringRequest stringRequest = new StringRequest(Request.Method.DELETE,
-                Crud.base_url + group_members_api_path,
+                Crud.base_url + group_members_api_path + "?user_id="+user_id+"&group_id="+group_id,
                 response -> {
                     try {
                         JSONObject res = new JSONObject(response);
@@ -162,7 +146,7 @@ public class GroupMembersApi {
                             JSONArray members_array = res.getJSONArray("data");
                             for(int i = 0; i < members_array.length(); i++){
                                 JSONObject user = members_array.getJSONObject(i);
-                                members.add(getUserFromJson(user));
+                                members.add(UserApi.getUserFromJson(user));
                             }
                             callback.onSuccess(members);
                         }else{
